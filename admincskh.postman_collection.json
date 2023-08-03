@@ -1,0 +1,1146 @@
+{
+	"info": {
+		"_postman_id": "3bede5b0-6633-4ec1-b04e-ca9ab84bfcfd",
+		"name": "okvip-cskh",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Authention",
+			"item": [
+				{
+					"name": "Users",
+					"item": [
+						{
+							"name": "register",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"userName\": \"admin1\",\r\n    \"password\": \"123456\",\r\n    \"fullName\": \"admin IT\",\r\n    \"phoneNumber\": \"0865323421\",\r\n    \"activeStatus\": \"1\",\r\n    \"email\": \"admin@gmail.com\",\r\n    \"role\": \"649d6360070ff1316e98c944\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "http://localhost:4444/api/user/register"
+							},
+							"response": []
+						},
+						{
+							"name": "login",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"userName\": \"admin1\",\r\n    \"password\": \"123456\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{url}}/api/user/login"
+							},
+							"response": []
+						},
+						{
+							"name": "insertUser",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n     \"userName\": \"admintest\",\r\n    \"password\": \"123456\",\r\n    \"fullName\": \"admintest IT\",\r\n    \"phoneNumber\": \"0865323421\",\r\n    \"activeStatus\": \"1\",\r\n    \"email\": \"admintest@gmail.com\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{url}}/api/user/insert"
+							},
+							"response": []
+						},
+						{
+							"name": "updateUser",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n     \"role\": \"649d6360070ff1316e98c944\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{url}}/api/user/update/649d615c7697cf549e378e53"
+							},
+							"response": []
+						},
+						{
+							"name": "getPaging",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"url": "{{url}}/api/user/getById/63f47e62a5e015f3cb75843a"
+							},
+							"response": []
+						},
+						{
+							"name": "getUserById",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"url": "{{url}}/api/user/getById/649d615c7697cf549e378e53"
+							},
+							"response": []
+						},
+						{
+							"name": "deleteUser",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"actionName\": \"test111111\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{url}}/api/user/delete/63ecfbd0f9c87ed4bdb0774f"
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "role",
+					"item": [
+						{
+							"name": "createRole",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"admin\"\r\n}   ",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{url}}/api/role/insert"
+							},
+							"response": []
+						},
+						{
+							"name": "updateRole",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"customer1111111111112222\"\r\n}   ",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{url}}/api/role/update/646cdb5239e3f94b273e6800"
+							},
+							"response": []
+						},
+						{
+							"name": "deleteRole",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{url}}/api/role/delete/646cdb5239e3f94b273e6800"
+							},
+							"response": []
+						},
+						{
+							"name": "getPagingRoles",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{url}}/api/role/getPaging?pageSize=10&pageIndex=1&search=admin",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"role",
+										"getPaging"
+									],
+									"query": [
+										{
+											"key": "pageSize",
+											"value": "10"
+										},
+										{
+											"key": "pageIndex",
+											"value": "1"
+										},
+										{
+											"key": "search",
+											"value": "admin"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getAll",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{url}}/api/role/getAll",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"role",
+										"getAll"
+									],
+									"query": [
+										{
+											"key": "search",
+											"value": "admin",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getRoleById",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"url": "{{url}}/api/role/getById/646cdc5495672d1d4e1c9179"
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "action",
+					"item": [
+						{
+							"name": "createAction",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"actionName\": \"deleteDomain\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{url}}/api/action/insert"
+							},
+							"response": []
+						},
+						{
+							"name": "updateAction",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Il9pZCI6IjYzZWNmNmMxZmE4YzlmOWQyYjk1NmQ4ZSIsInVzZXJOYW1lIjoiYWRtaW4iLCJwYXNzd29yZCI6IiIsImZ1bGxOYW1lIjoiYWRtaW4gSVQiLCJlbWFpbCI6ImFkbWluQGdtYWlsLmNvbSIsInBob25lTnVtYmVyIjoiMDg2NTMyMzQyMSIsImFjdGl2ZVN0YXR1cyI6MSwiY3JlYXRlZFRpbWUiOiIyMDIzLTAyLTE1VDE1OjE0OjA5LjQ0OVoiLCJyb2xlIjp7Il9pZCI6IjYzZWNmNjc2ZDNkNmUwOGE5YzBlZDZlMCIsInJvbGVOYW1lIjoiYWRtaW5pc3RyYXRvciIsImNyZWF0ZWRUaW1lIjoiMjAyMy0wMi0xNVQxNToxMjo1NC4wMzRaIn19LCJpYXQiOjE2NzY0NzQwNTYsImV4cCI6MTY3NjQ4ODQ1Nn0.oWSsmi8gT6EtFM4KJSVhGHamHkMPhjVbv9Pebo-TLC8",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"actionName\": \"test111111\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{url}}/api/action/update/63ecf858e34d1fb1e7189144"
+							},
+							"response": []
+						},
+						{
+							"name": "deleteAction",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"actionName\": \"test111111\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{url}}/api/action/delete/63ecf858e34d1fb1e7189144"
+							},
+							"response": []
+						},
+						{
+							"name": "getPagingActions",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"actionName\": \"test111111\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/api/action/getPaging?pageSize=1000&pageIndex=1",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"action",
+										"getPaging"
+									],
+									"query": [
+										{
+											"key": "pageSize",
+											"value": "1000"
+										},
+										{
+											"key": "pageIndex",
+											"value": "1"
+										},
+										{
+											"key": "search",
+											"value": "updateAction",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getRoleById",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"url": "{{url}}/api/action/getById/63ecf77b3337106487c34528"
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "roleAction",
+					"item": [
+						{
+							"name": "createRoleAction",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"role\": \"649d6360070ff1316e98c944\",\r\n    \"action\": \"649d66302e8ae55d9a8b9bde\"\r\n}   ",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{url}}/api/roleaction/insert"
+							},
+							"response": []
+						},
+						{
+							"name": "deleteRoleAction",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Il9pZCI6IjYzZWNmNmMxZmE4YzlmOWQyYjk1NmQ4ZSIsInVzZXJOYW1lIjoiYWRtaW4iLCJwYXNzd29yZCI6IiIsImZ1bGxOYW1lIjoiYWRtaW4gSVQiLCJlbWFpbCI6ImFkbWluQGdtYWlsLmNvbSIsInBob25lTnVtYmVyIjoiMDg2NTMyMzQyMSIsImFjdGl2ZVN0YXR1cyI6MSwiY3JlYXRlZFRpbWUiOiIyMDIzLTAyLTE1VDE1OjE0OjA5LjQ0OVoiLCJyb2xlIjp7Il9pZCI6IjYzZWNmNjc2ZDNkNmUwOGE5YzBlZDZlMCIsInJvbGVOYW1lIjoiYWRtaW5pc3RyYXRvciIsImNyZWF0ZWRUaW1lIjoiMjAyMy0wMi0xNVQxNToxMjo1NC4wMzRaIn19LCJpYXQiOjE2NzY0NzQwNTYsImV4cCI6MTY3NjQ4ODQ1Nn0.oWSsmi8gT6EtFM4KJSVhGHamHkMPhjVbv9Pebo-TLC8",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"actionName\": \"test111111\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{url}}/api/roleaction/delete/63ed01041ab684f2d05ec03b"
+							},
+							"response": []
+						},
+						{
+							"name": "getPagingRoleActions",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/api/roleaction/getPaging?pageSize=1000&pageIndex=1",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"roleaction",
+										"getPaging"
+									],
+									"query": [
+										{
+											"key": "pageSize",
+											"value": "1000"
+										},
+										{
+											"key": "pageIndex",
+											"value": "1"
+										},
+										{
+											"key": "search",
+											"value": "updateAction",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getPagingRoleActionsByUserId",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/api/roleaction/getPagingRoleActionsByUserId?pageSize=1000&pageIndex=1",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"roleaction",
+										"getPagingRoleActionsByUserId"
+									],
+									"query": [
+										{
+											"key": "pageSize",
+											"value": "1000"
+										},
+										{
+											"key": "pageIndex",
+											"value": "1"
+										},
+										{
+											"key": "userId",
+											"value": "63ecf6c1fa8c9f9d2b956d8e",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Banner",
+			"item": [
+				{
+					"name": "createBanner",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"img\": \"\",\r\n    \"slug\": \"\",\r\n    \"domain\": \"649e9e86b121b27084062ac7\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{url}}/api/banner/insert"
+					},
+					"response": []
+				},
+				{
+					"name": "updateBanner",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"domain\": \"649d6da67a15265b52c5b46d\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{url}}/api/banner/update/649d6b577a15265b52c5b44b"
+					},
+					"response": []
+				},
+				{
+					"name": "deleteBanner",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"actionName\": \"test111111\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{url}}/api/banner/delete/649d6b3a7a15265b52c5b440"
+					},
+					"response": []
+				},
+				{
+					"name": "getPagingBanners",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Il9pZCI6IjYzZWNmNmMxZmE4YzlmOWQyYjk1NmQ4ZSIsInVzZXJOYW1lIjoiYWRtaW4iLCJwYXNzd29yZCI6IiIsImZ1bGxOYW1lIjoiYWRtaW4gSVQiLCJlbWFpbCI6ImFkbWluQGdtYWlsLmNvbSIsInBob25lTnVtYmVyIjoiMDg2NTMyMzQyMSIsImFjdGl2ZVN0YXR1cyI6MSwiY3JlYXRlZFRpbWUiOiIyMDIzLTAyLTE1VDE1OjE0OjA5LjQ0OVoiLCJyb2xlIjp7Il9pZCI6IjYzZWNmNjc2ZDNkNmUwOGE5YzBlZDZlMCIsInJvbGVOYW1lIjoiYWRtaW5pc3RyYXRvciIsImNyZWF0ZWRUaW1lIjoiMjAyMy0wMi0xNVQxNToxMjo1NC4wMzRaIn19LCJpYXQiOjE2NzY0NzQwNTYsImV4cCI6MTY3NjQ4ODQ1Nn0.oWSsmi8gT6EtFM4KJSVhGHamHkMPhjVbv9Pebo-TLC8",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/api/banner/getPaging?pageSize=10&pageIndex=1&domain=649e9e86b121b27084062ac7&search",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"banner",
+								"getPaging"
+							],
+							"query": [
+								{
+									"key": "pageSize",
+									"value": "10"
+								},
+								{
+									"key": "pageIndex",
+									"value": "1"
+								},
+								{
+									"key": "domain",
+									"value": "649e9e86b121b27084062ac7"
+								},
+								{
+									"key": "search",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getBannerById",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"url": "{{url}}/api/banner/getById/649d6b577a15265b52c5b44b"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Domain",
+			"item": [
+				{
+					"name": "createDomain",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"domain\": \"https://live.shbet.win/\",\r\n    \"title\": \"\",\r\n    \"logo\": \"https://live.shbet.win/images/shbet-logo.png\",\r\n    \"backgroud\": \"https://live.shbet.win/images/bg.png\",\r\n    \"description\": \"\",\r\n    \"content\": \"\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{url}}/api/domain/insert"
+					},
+					"response": []
+				},
+				{
+					"name": "updateDomain",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"domain\": \"test111111\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{url}}/api/domain/update/649d6a4fbbe6d19d402d3c37"
+					},
+					"response": []
+				},
+				{
+					"name": "deleteDomain",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"actionName\": \"test111111\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{url}}/api/action/delete/63ecf858e34d1fb1e7189144"
+					},
+					"response": []
+				},
+				{
+					"name": "getPagingDomains",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Il9pZCI6IjYzZWNmNmMxZmE4YzlmOWQyYjk1NmQ4ZSIsInVzZXJOYW1lIjoiYWRtaW4iLCJwYXNzd29yZCI6IiIsImZ1bGxOYW1lIjoiYWRtaW4gSVQiLCJlbWFpbCI6ImFkbWluQGdtYWlsLmNvbSIsInBob25lTnVtYmVyIjoiMDg2NTMyMzQyMSIsImFjdGl2ZVN0YXR1cyI6MSwiY3JlYXRlZFRpbWUiOiIyMDIzLTAyLTE1VDE1OjE0OjA5LjQ0OVoiLCJyb2xlIjp7Il9pZCI6IjYzZWNmNjc2ZDNkNmUwOGE5YzBlZDZlMCIsInJvbGVOYW1lIjoiYWRtaW5pc3RyYXRvciIsImNyZWF0ZWRUaW1lIjoiMjAyMy0wMi0xNVQxNToxMjo1NC4wMzRaIn19LCJpYXQiOjE2NzY0NzQwNTYsImV4cCI6MTY3NjQ4ODQ1Nn0.oWSsmi8gT6EtFM4KJSVhGHamHkMPhjVbv9Pebo-TLC8",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/api/domain/getPaging?pageSize=10&pageIndex=1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"domain",
+								"getPaging"
+							],
+							"query": [
+								{
+									"key": "pageSize",
+									"value": "10"
+								},
+								{
+									"key": "pageIndex",
+									"value": "1"
+								},
+								{
+									"key": "search",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getDomainById",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"url": "{{url}}/api/domain/getById/649d6a4fbbe6d19d402d3c37"
+					},
+					"response": []
+				},
+				{
+					"name": "getPageByDomainId",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/api/domain/getPageByDomainId/649e9e86b121b27084062ac7",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"domain",
+								"getPageByDomainId",
+								"649e9e86b121b27084062ac7"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "ContactType",
+			"item": [
+				{
+					"name": "createContactType",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"thong tin khach hang\",\r\n    \"img\": \"tesst\",\r\n    \"order\": 1,\r\n    \"description\": \"tesst\",\r\n    \"content\": \"tesst\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{url}}/api/contactType/insert"
+					},
+					"response": []
+				},
+				{
+					"name": "updateContactType",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"thong tin khach hang\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{url}}/api/contactType/update/649d6e427a15265b52c5b47c"
+					},
+					"response": []
+				},
+				{
+					"name": "deleteContactType",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"actionName\": \"test111111\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{url}}/api/contactType/delete/649d6e427a15265b52c5b47c"
+					},
+					"response": []
+				},
+				{
+					"name": "getPagingContactTypes",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Il9pZCI6IjYzZWNmNmMxZmE4YzlmOWQyYjk1NmQ4ZSIsInVzZXJOYW1lIjoiYWRtaW4iLCJwYXNzd29yZCI6IiIsImZ1bGxOYW1lIjoiYWRtaW4gSVQiLCJlbWFpbCI6ImFkbWluQGdtYWlsLmNvbSIsInBob25lTnVtYmVyIjoiMDg2NTMyMzQyMSIsImFjdGl2ZVN0YXR1cyI6MSwiY3JlYXRlZFRpbWUiOiIyMDIzLTAyLTE1VDE1OjE0OjA5LjQ0OVoiLCJyb2xlIjp7Il9pZCI6IjYzZWNmNjc2ZDNkNmUwOGE5YzBlZDZlMCIsInJvbGVOYW1lIjoiYWRtaW5pc3RyYXRvciIsImNyZWF0ZWRUaW1lIjoiMjAyMy0wMi0xNVQxNToxMjo1NC4wMzRaIn19LCJpYXQiOjE2NzY0NzQwNTYsImV4cCI6MTY3NjQ4ODQ1Nn0.oWSsmi8gT6EtFM4KJSVhGHamHkMPhjVbv9Pebo-TLC8",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/api/contactType/getPaging?pageSize=10&pageIndex=1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"contactType",
+								"getPaging"
+							],
+							"query": [
+								{
+									"key": "pageSize",
+									"value": "10"
+								},
+								{
+									"key": "pageIndex",
+									"value": "1"
+								},
+								{
+									"key": "search",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getContactTypeById",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"url": "{{url}}/api/contactType/getById/649d6e9c7a15265b52c5b486"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Contact",
+			"item": [
+				{
+					"name": "createContact",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"LƯU Ý QUAN TRỌNG\",\r\n    \"img\": \"https://live.shbet.win/images/icon-warning.png\",\r\n    \"slug\": \"\",\r\n    \"order\": 1,\r\n    \"domain\": \"649e9e86b121b27084062ac7\",\r\n    \"contactType\": \"649e9ee0b121b27084062acd\",\r\n    \"description\": \"\",\r\n    \"content\": \"\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{url}}/api/contact/insert"
+					},
+					"response": []
+				},
+				{
+					"name": "updateContact",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"thong tin khach hang1111\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{url}}/api/contact/update/649d6f337a15265b52c5b48e"
+					},
+					"response": []
+				},
+				{
+					"name": "deleteContact",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"actionName\": \"test111111\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{url}}/api/contact/delete/649d6f337a15265b52c5b48e"
+					},
+					"response": []
+				},
+				{
+					"name": "getPagingContacts",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Il9pZCI6IjYzZWNmNmMxZmE4YzlmOWQyYjk1NmQ4ZSIsInVzZXJOYW1lIjoiYWRtaW4iLCJwYXNzd29yZCI6IiIsImZ1bGxOYW1lIjoiYWRtaW4gSVQiLCJlbWFpbCI6ImFkbWluQGdtYWlsLmNvbSIsInBob25lTnVtYmVyIjoiMDg2NTMyMzQyMSIsImFjdGl2ZVN0YXR1cyI6MSwiY3JlYXRlZFRpbWUiOiIyMDIzLTAyLTE1VDE1OjE0OjA5LjQ0OVoiLCJyb2xlIjp7Il9pZCI6IjYzZWNmNjc2ZDNkNmUwOGE5YzBlZDZlMCIsInJvbGVOYW1lIjoiYWRtaW5pc3RyYXRvciIsImNyZWF0ZWRUaW1lIjoiMjAyMy0wMi0xNVQxNToxMjo1NC4wMzRaIn19LCJpYXQiOjE2NzY0NzQwNTYsImV4cCI6MTY3NjQ4ODQ1Nn0.oWSsmi8gT6EtFM4KJSVhGHamHkMPhjVbv9Pebo-TLC8",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/api/contact/getPaging?pageSize=10&pageIndex=1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"contact",
+								"getPaging"
+							],
+							"query": [
+								{
+									"key": "pageSize",
+									"value": "10"
+								},
+								{
+									"key": "pageIndex",
+									"value": "1"
+								},
+								{
+									"key": "search",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getContactById",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"url": "{{url}}/api/contact/getById/649d6f337a15265b52c5b48e"
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

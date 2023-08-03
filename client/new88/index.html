@@ -1,0 +1,1216 @@
+<!DOCTYPE html>
+<html lang="en-US" prefix="og: https://ogp.me/ns#">
+
+<head>
+    <meta charset="UTF-8">
+    <script
+        type="2459de4dd970afc376a08530-text/javascript">if(navigator.userAgent.match(/MSIE|Internet Explorer/i)||navigator.userAgent.match(/Trident\/7\..*?rv:11/i)){var href=document.location.href;if(!href.match(/[?&]nowprocket/)){if(href.indexOf("?")==-1){if(href.indexOf("#")==-1){document.location.href=href+"?nowprocket=1"}else{document.location.href=href.replace("#","?nowprocket=1#")}}else{if(href.indexOf("#")==-1){document.location.href=href+"&nowprocket=1"}else{document.location.href=href.replace("#","&nowprocket=1#")}}}}</script>
+    <script
+        type="2459de4dd970afc376a08530-text/javascript">class RocketLazyLoadScripts{constructor(e){this.triggerEvents=e,this.eventOptions={passive:!0},this.userEventListener=this.triggerListener.bind(this),this.delayedScripts={normal:[],async:[],defer:[]},this.allJQueries=[]}_addUserInteractionListener(e){this.triggerEvents.forEach((t=>window.addEventListener(t,e.userEventListener,e.eventOptions)))}_removeUserInteractionListener(e){this.triggerEvents.forEach((t=>window.removeEventListener(t,e.userEventListener,e.eventOptions)))}triggerListener(){this._removeUserInteractionListener(this),"loading"===document.readyState?document.addEventListener("DOMContentLoaded",this._loadEverythingNow.bind(this)):this._loadEverythingNow()}async _loadEverythingNow(){this._delayEventListeners(),this._delayJQueryReady(this),this._handleDocumentWrite(),this._registerAllDelayedScripts(),this._preloadAllScripts(),await this._loadScriptsFromList(this.delayedScripts.normal),await this._loadScriptsFromList(this.delayedScripts.defer),await this._loadScriptsFromList(this.delayedScripts.async),await this._triggerDOMContentLoaded(),await this._triggerWindowLoad(),window.dispatchEvent(new Event("rocket-allScriptsLoaded"))}_registerAllDelayedScripts(){document.querySelectorAll("script[type=rocketlazyloadscript]").forEach((e=>{e.hasAttribute("src")?e.hasAttribute("async")&&!1!==e.async?this.delayedScripts.async.push(e):e.hasAttribute("defer")&&!1!==e.defer||"module"===e.getAttribute("data-rocket-type")?this.delayedScripts.defer.push(e):this.delayedScripts.normal.push(e):this.delayedScripts.normal.push(e)}))}async _transformScript(e){return await this._requestAnimFrame(),new Promise((t=>{const n=document.createElement("script");let r;[...e.attributes].forEach((e=>{let t=e.nodeName;"type"!==t&&("data-rocket-type"===t&&(t="type",r=e.nodeValue),n.setAttribute(t,e.nodeValue))})),e.hasAttribute("src")?(n.addEventListener("load",t),n.addEventListener("error",t)):(n.text=e.text,t()),e.parentNode.replaceChild(n,e)}))}async _loadScriptsFromList(e){const t=e.shift();return t?(await this._transformScript(t),this._loadScriptsFromList(e)):Promise.resolve()}_preloadAllScripts(){var e=document.createDocumentFragment();[...this.delayedScripts.normal,...this.delayedScripts.defer,...this.delayedScripts.async].forEach((t=>{const n=t.getAttribute("src");if(n){const t=document.createElement("link");t.href=n,t.rel="preload",t.as="script",e.appendChild(t)}})),document.head.appendChild(e)}_delayEventListeners(){let e={};function t(t,n){!function(t){function n(n){return e[t].eventsToRewrite.indexOf(n)>=0?"rocket-"+n:n}e[t]||(e[t]={originalFunctions:{add:t.addEventListener,remove:t.removeEventListener},eventsToRewrite:[]},t.addEventListener=function(){arguments[0]=n(arguments[0]),e[t].originalFunctions.add.apply(t,arguments)},t.removeEventListener=function(){arguments[0]=n(arguments[0]),e[t].originalFunctions.remove.apply(t,arguments)})}(t),e[t].eventsToRewrite.push(n)}function n(e,t){let n=e[t];Object.defineProperty(e,t,{get:()=>n||function(){},set(r){e["rocket"+t]=n=r}})}t(document,"DOMContentLoaded"),t(window,"DOMContentLoaded"),t(window,"load"),t(window,"pageshow"),t(document,"readystatechange"),n(document,"onreadystatechange"),n(window,"onload"),n(window,"onpageshow")}_delayJQueryReady(e){let t=window.jQuery;Object.defineProperty(window,"jQuery",{get:()=>t,set(n){if(n&&n.fn&&!e.allJQueries.includes(n)){n.fn.ready=n.fn.init.prototype.ready=function(t){e.domReadyFired?t.bind(document)(n):document.addEventListener("rocket-DOMContentLoaded",(()=>t.bind(document)(n)))};const t=n.fn.on;n.fn.on=n.fn.init.prototype.on=function(){if(this[0]===window){function e(e){return e.split(" ").map((e=>"load"===e||0===e.indexOf("load.")?"rocket-jquery-load":e)).join(" ")}"string"==typeof arguments[0]||arguments[0]instanceof String?arguments[0]=e(arguments[0]):"object"==typeof arguments[0]&&Object.keys(arguments[0]).forEach((t=>{delete Object.assign(arguments[0],{[e(t)]:arguments[0][t]})[t]}))}return t.apply(this,arguments),this},e.allJQueries.push(n)}t=n}})}async _triggerDOMContentLoaded(){this.domReadyFired=!0,await this._requestAnimFrame(),document.dispatchEvent(new Event("rocket-DOMContentLoaded")),await this._requestAnimFrame(),window.dispatchEvent(new Event("rocket-DOMContentLoaded")),await this._requestAnimFrame(),document.dispatchEvent(new Event("rocket-readystatechange")),await this._requestAnimFrame(),document.rocketonreadystatechange&&document.rocketonreadystatechange()}async _triggerWindowLoad(){await this._requestAnimFrame(),window.dispatchEvent(new Event("rocket-load")),await this._requestAnimFrame(),window.rocketonload&&window.rocketonload(),await this._requestAnimFrame(),this.allJQueries.forEach((e=>e(window).trigger("rocket-jquery-load"))),window.dispatchEvent(new Event("rocket-pageshow")),await this._requestAnimFrame(),window.rocketonpageshow&&window.rocketonpageshow()}_handleDocumentWrite(){const e=new Map;document.write=document.writeln=function(t){const n=document.currentScript,r=document.createRange(),i=n.parentElement;let o=e.get(n);void 0===o&&(o=n.nextSibling,e.set(n,o));const a=document.createDocumentFragment();r.setStart(a,0),a.appendChild(r.createContextualFragment(t)),i.insertBefore(a,o)}}async _requestAnimFrame(){return new Promise((e=>requestAnimationFrame(e)))}static run(){const e=new RocketLazyLoadScripts(["keydown","mousemove","touchmove","touchstart","touchend","wheel"]);e._addUserInteractionListener(e)}}RocketLazyLoadScripts.run();</script>
+    <script type="rocketlazyloadscript" src="//cdn.jsdelivr.net/npm/sweetalert2@11" defer></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>New88 Trang Chính Thức | Đăng Nhập &amp; Đăng Ký New88</title>
+    <meta name="description"
+        content="NEW88 nhà cung cấp casino trực tuyến lớn nhất Việt Nam như Bacarat, Xóc Đĩa, Tài xỉu, Bắn Cá, Nổ hũ, Cược Thể Thao, Xổ số, Đá Gà ... Nạp rút nhanh chóng, khuyến mãi hấp dẫn, dịch vụ CSKH 24/7..." />
+    <meta name="robots" content="follow, index, max-snippet:-1, max-video-preview:-1, max-image-preview:large" />
+    <link rel="canonical" href="//new88.online/" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="New88 Trang Chính Thức | Đăng Nhập &amp; Đăng Ký New88" />
+    <meta property="og:description"
+        content="NEW88 nhà cung cấp casino trực tuyến lớn nhất Việt Nam như Bacarat, Xóc Đĩa, Tài xỉu, Bắn Cá, Nổ hũ, Cược Thể Thao, Xổ số, Đá Gà ... Nạp rút nhanh chóng, khuyến mãi hấp dẫn, dịch vụ CSKH 24/7..." />
+    <meta property="og:url" content="https://new88.online/" />
+    <meta property="og:site_name" content="NEW88 TRANG CHÍNH THỨC | ĐĂNG NHẬP NEW88 | ĐĂNG KÝ NEW88" />
+    <meta property="og:updated_time" content="2023-07-01T19:53:50+07:00" />
+    <meta property="article:published_time" content="2023-05-10T07:00:11+07:00" />
+    <meta property="article:modified_time" content="2023-07-01T19:53:50+07:00" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="New88 Trang Chính Thức | Đăng Nhập &amp; Đăng Ký New88" />
+    <meta name="twitter:description"
+        content="NEW88 nhà cung cấp casino trực tuyến lớn nhất Việt Nam như Bacarat, Xóc Đĩa, Tài xỉu, Bắn Cá, Nổ hũ, Cược Thể Thao, Xổ số, Đá Gà ... Nạp rút nhanh chóng, khuyến mãi hấp dẫn, dịch vụ CSKH 24/7..." />
+    <meta name="twitter:label1" content="Written by" />
+    <meta name="twitter:data1" content="jadern" />
+    <meta name="twitter:label2" content="Time to read" />
+    <meta name="twitter:data2" content="Less than a minute" />
+    <script type="application/ld+json"
+        class="rank-math-schema-pro">{"@context":"https://schema.org","@graph":[{"@type":["Organization","Person"],"@id":"https://new88.online/#person","name":"NEW88 - LINK \u0110\u0102NG NH\u1eacP CH\u00cdNH TH\u1ee8C, NEW88 \u0110\u0102NG K\u00dd!","url":"https://new88.online","logo":{"@type":"ImageObject","@id":"https://new88.online/#logo","url":"https://new88.online/wp-content/uploads/2023/06/logo-1.png","contentUrl":"https://new88.online/wp-content/uploads/2023/06/logo-1.png","caption":"NEW88 - LINK \u0110\u0102NG NH\u1eacP CH\u00cdNH TH\u1ee8C, NEW88 \u0110\u0102NG K\u00dd!","inLanguage":"en-US"},"image":{"@id":"https://new88.online/#logo"}},{"@type":"WebSite","@id":"https://new88.online/#website","url":"https://new88.online","name":"NEW88 - LINK \u0110\u0102NG NH\u1eacP CH\u00cdNH TH\u1ee8C, NEW88 \u0110\u0102NG K\u00dd!","publisher":{"@id":"https://new88.online/#person"},"inLanguage":"en-US","potentialAction":{"@type":"SearchAction","target":"https://new88.online/?s={search_term_string}","query-input":"required name=search_term_string"}},{"@type":"WebPage","@id":"https://new88.online/#webpage","url":"https://new88.online/","name":"New88 Trang Ch\u00ednh Th\u1ee9c | \u0110\u0103ng Nh\u1eadp &amp; \u0110\u0103ng K\u00fd New88","datePublished":"2023-05-10T07:00:11+07:00","dateModified":"2023-07-01T19:53:50+07:00","about":{"@id":"https://new88.online/#person"},"isPartOf":{"@id":"https://new88.online/#website"},"inLanguage":"en-US"},{"@type":"Person","@id":"https://new88.online/author/jadern/","name":"jadern","url":"https://new88.online/author/jadern/","image":{"@type":"ImageObject","@id":"https://secure.gravatar.com/avatar/aa5f4723c47710b1ad04da69cb4da14a?s=96&amp;d=mm&amp;r=g","url":"https://secure.gravatar.com/avatar/aa5f4723c47710b1ad04da69cb4da14a?s=96&amp;d=mm&amp;r=g","caption":"jadern","inLanguage":"en-US"}},{"@type":"Article","headline":"New88 Trang Ch\u00ednh Th\u1ee9c | \u0110\u0103ng Nh\u1eadp &amp; \u0110\u0103ng K\u00fd New88","keywords":"new88","datePublished":"2023-05-10T07:00:11+07:00","dateModified":"2023-07-01T19:53:50+07:00","author":{"@id":"https://new88.online/author/jadern/","name":"jadern"},"publisher":{"@id":"https://new88.online/#person"},"description":"NEW88 nh\u00e0 cung c\u1ea5p casino tr\u1ef1c tuy\u1ebfn l\u1edbn nh\u1ea5t Vi\u1ec7t Nam nh\u01b0 Bacarat, X\u00f3c \u0110\u0129a, T\u00e0i x\u1ec9u, B\u1eafn C\u00e1, N\u1ed5 h\u0169, C\u01b0\u1ee3c Th\u1ec3 Thao, X\u1ed5 s\u1ed1, \u0110\u00e1 G\u00e0 ... N\u1ea1p r\u00fat nhanh ch\u00f3ng, khuy\u1ebfn m\u00e3i h\u1ea5p d\u1eabn, d\u1ecbch v\u1ee5 CSKH 24/7...","name":"New88 Trang Ch\u00ednh Th\u1ee9c | \u0110\u0103ng Nh\u1eadp &amp; \u0110\u0103ng K\u00fd New88","@id":"https://new88.online/#richSnippet","isPartOf":{"@id":"https://new88.online/#webpage"},"inLanguage":"en-US","mainEntityOfPage":{"@id":"https://new88.online/#webpage"}}]}</script>
+
+    <link rel="dns-prefetch" href="//www.googletagmanager.com" />
+    <link rel="alternate" type="application/rss+xml"
+        title="NEW88 TRANG CHÍNH THỨC | ĐĂNG NHẬP NEW88 | ĐĂNG KÝ NEW88 &raquo; Feed" href="//new88.online/feed/" />
+    <link rel="alternate" type="application/rss+xml"
+        title="NEW88 TRANG CHÍNH THỨC | ĐĂNG NHẬP NEW88 | ĐĂNG KÝ NEW88 &raquo; Comments Feed"
+        href="//new88.online/comments/feed/" />
+    <link rel="stylesheet" id="wp-block-library-css"
+        href="//new88.online/wp-includes/css/dist/block-library/style.min.css?ver=6.2.2" media="all" />
+    <link rel="stylesheet" id="classic-theme-styles-css"
+        href="//new88.online/wp-includes/css/classic-themes.min.css?ver=6.2.2" media="all" />
+
+    <link rel="stylesheet" id="generate-style-css"
+        href="//new88.online/wp-content/themes/generatepress/assets/css/main.min.css?ver=3.3.0" media="all" />
+    <link rel="stylesheet" id="generate-blog-columns-css"
+        href="//new88.online/wp-content/plugins/gp-premium/blog/functions/css/columns.min.css?ver=2.3.1" media="all" />
+    <link rel="stylesheet" id="generate-offside-css"
+        href="//new88.online/wp-content/plugins/gp-premium/menu-plus/functions/css/offside.min.css?ver=2.3.1"
+        media="all" />
+    <link rel="stylesheet" id="generate-navigation-branding-css"
+        href="//new88.online/wp-content/plugins/gp-premium/menu-plus/functions/css/navigation-branding-flex.min.css?ver=2.3.1"
+        media="all" />
+
+    <script type="rocketlazyloadscript" src="//new88.online/wp-includes/js/jquery/jquery.min.js?ver=3.6.4"
+        id="jquery-core-js" defer></script>
+    <script type="rocketlazyloadscript" src="//new88.online/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.0"
+        id="jquery-migrate-js" defer></script>
+
+    <link rel="https://api.w.org/" href="//new88.online/wp-json/" />
+    <link rel="alternate" type="application/json" href="//new88.online/wp-json/wp/v2/pages/5354" />
+    <link rel="EditURI" type="application/rsd+xml" title="RSD" href="//new88.online/xmlrpc.php?rsd" />
+    <link rel="wlwmanifest" type="application/wlwmanifest+xml" href="//new88.online/wp-includes/wlwmanifest.xml" />
+    <meta name="generator" content="WordPress 6.2.2" />
+    <link rel="shortlink" href="//new88.online/" />
+    <link rel="alternate" type="application/json+oembed"
+        href="//new88.online/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fnew88.online%2F" />
+    <link rel="alternate" type="text/xml+oembed"
+        href="//new88.online/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fnew88.online%2F&#038;format=xml" />
+    <meta name="generator" content="Site Kit by Google 1.104.0" />
+
+    <link rel="icon" href="//new88.online/wp-content/uploads/2022/02/cropped-iconfavi-32x32.png" sizes="32x32" />
+    <link rel="icon" href="//new88.online/wp-content/uploads/2022/02/cropped-iconfavi-192x192.png" sizes="192x192" />
+    <link rel="apple-touch-icon" href="//new88.online/wp-content/uploads/2022/02/cropped-iconfavi-180x180.png" />
+    <meta name="msapplication-TileImage"
+        content="https://new88.online/wp-content/uploads/2022/02/cropped-iconfavi-270x270.png" />
+    <link rel="stylesheet" href="./css/main.css">
+    <noscript>
+        <style id="rocket-lazyload-nojs-css">
+            .rll-youtube-player,
+            [data-lazy-src] {
+                display: none !important;
+            }
+        </style>
+    </noscript>
+</head>
+
+<body
+    class="home page-template-default page page-id-5354 wp-custom-logo wp-embed-responsive post-image-aligned-center slideout-enabled slideout-mobile sticky-menu-fade sticky-enabled mobile-sticky-menu mobile-header mobile-header-sticky no-sidebar nav-below-header one-container header-aligned-left dropdown-hover full-width-content"
+    itemtype="https://schema.org/WebPage" itemscope>
+    <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none"
+        style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-dark-grayscale">
+                <fecolormatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <fecomponenttransfer color-interpolation-filters="sRGB">
+                    <fefuncr type="table" tablevalues="0 0.49803921568627" />
+                    <fefuncg type="table" tablevalues="0 0.49803921568627" />
+                    <fefuncb type="table" tablevalues="0 0.49803921568627" />
+                    <fefunca type="table" tablevalues="1 1" />
+                </feComponentTransfer>
+                <fecomposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none"
+        style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-grayscale">
+                <fecolormatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <fecomponenttransfer color-interpolation-filters="sRGB">
+                    <fefuncr type="table" tablevalues="0 1" />
+                    <fefuncg type="table" tablevalues="0 1" />
+                    <fefuncb type="table" tablevalues="0 1" />
+                    <fefunca type="table" tablevalues="1 1" />
+                </feComponentTransfer>
+                <fecomposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none"
+        style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-purple-yellow">
+                <fecolormatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <fecomponenttransfer color-interpolation-filters="sRGB">
+                    <fefuncr type="table" tablevalues="0.54901960784314 0.98823529411765" />
+                    <fefuncg type="table" tablevalues="0 1" />
+                    <fefuncb type="table" tablevalues="0.71764705882353 0.25490196078431" />
+                    <fefunca type="table" tablevalues="1 1" />
+                </feComponentTransfer>
+                <fecomposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none"
+        style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-blue-red">
+                <fecolormatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <fecomponenttransfer color-interpolation-filters="sRGB">
+                    <fefuncr type="table" tablevalues="0 1" />
+                    <fefuncg type="table" tablevalues="0 0.27843137254902" />
+                    <fefuncb type="table" tablevalues="0.5921568627451 0.27843137254902" />
+                    <fefunca type="table" tablevalues="1 1" />
+                </feComponentTransfer>
+                <fecomposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none"
+        style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-midnight">
+                <fecolormatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <fecomponenttransfer color-interpolation-filters="sRGB">
+                    <fefuncr type="table" tablevalues="0 0" />
+                    <fefuncg type="table" tablevalues="0 0.64705882352941" />
+                    <fefuncb type="table" tablevalues="0 1" />
+                    <fefunca type="table" tablevalues="1 1" />
+                </feComponentTransfer>
+                <fecomposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none"
+        style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-magenta-yellow">
+                <fecolormatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <fecomponenttransfer color-interpolation-filters="sRGB">
+                    <fefuncr type="table" tablevalues="0.78039215686275 1" />
+                    <fefuncg type="table" tablevalues="0 0.94901960784314" />
+                    <fefuncb type="table" tablevalues="0.35294117647059 0.47058823529412" />
+                    <fefunca type="table" tablevalues="1 1" />
+                </feComponentTransfer>
+                <fecomposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none"
+        style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-purple-green">
+                <fecolormatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <fecomponenttransfer color-interpolation-filters="sRGB">
+                    <fefuncr type="table" tablevalues="0.65098039215686 0.40392156862745" />
+                    <fefuncg type="table" tablevalues="0 1" />
+                    <fefuncb type="table" tablevalues="0.44705882352941 0.4" />
+                    <fefunca type="table" tablevalues="1 1" />
+                </feComponentTransfer>
+                <fecomposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none"
+        style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-blue-orange">
+                <fecolormatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <fecomponenttransfer color-interpolation-filters="sRGB">
+                    <fefuncr type="table" tablevalues="0.098039215686275 1" />
+                    <fefuncg type="table" tablevalues="0 0.66274509803922" />
+                    <fefuncb type="table" tablevalues="0.84705882352941 0.41960784313725" />
+                    <fefunca type="table" tablevalues="1 1" />
+                </feComponentTransfer>
+                <fecomposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><a class="screen-reader-text skip-link" href="#content" title="Skip to content">Skip to content</a>
+    <nav id="mobile-header" itemtype="https://schema.org/SiteNavigationElement" itemscope
+        class="main-navigation mobile-header-navigation has-menu-bar-items">
+        <div class="inside-navigation grid-container grid-parent">
+            <button class="menu-toggle" aria-controls="mobile-menu" aria-expanded="false">
+                <span class="gp-icon icon-menu-bars"><svg viewbox="0 0 512 512" aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg" width="1em" height="1em">
+                        <path
+                            d="M0 96c0-13.255 10.745-24 24-24h464c13.255 0 24 10.745 24 24s-10.745 24-24 24H24c-13.255 0-24-10.745-24-24zm0 160c0-13.255 10.745-24 24-24h464c13.255 0 24 10.745 24 24s-10.745 24-24 24H24c-13.255 0-24-10.745-24-24zm0 160c0-13.255 10.745-24 24-24h464c13.255 0 24 10.745 24 24s-10.745 24-24 24H24c-13.255 0-24-10.745-24-24z" />
+                    </svg><svg viewbox="0 0 512 512" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="1em"
+                        height="1em">
+                        <path
+                            d="M71.029 71.029c9.373-9.372 24.569-9.372 33.942 0L256 222.059l151.029-151.03c9.373-9.372 24.569-9.372 33.942 0 9.372 9.373 9.372 24.569 0 33.942L289.941 256l151.03 151.029c9.372 9.373 9.372 24.569 0 33.942-9.373 9.372-24.569 9.372-33.942 0L256 289.941l-151.029 151.03c-9.373 9.372-24.569 9.372-33.942 0-9.372-9.373-9.372-24.569 0-33.942L222.059 256 71.029 104.971c-9.372-9.373-9.372-24.569 0-33.942z" />
+                    </svg></span><span class="mobile-menu">Menu</span> </button>
+            <div id="mobile-menu" class="main-nav">
+                <ul id="menu-menu" class=" menu sf-menu">
+                    <li id="menu-item-6526"
+                        class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-6526">
+                        <a href="https://new88.online/" aria-current="page">Trang Chủ New88</a>
+                    </li>
+                    <li id="menu-item-6533"
+                        class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6533"><a
+                            href="https://new88.online/codemienphi/">Code New88</a></li>
+                    <li id="menu-item-6527"
+                        class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6527"><a
+                            href="https://new88.online/huong-dan/">Hướng Dẫn</a></li>
+                    <li id="menu-item-6528"
+                        class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6528"><a
+                            href="https://new88.online/trung-tam-khuyen-mai/">Khuyến Mãi</a></li>
+                    <li id="menu-item-6529"
+                        class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6529"><a
+                            href="https://new88.online/xo-so-new88/">Xổ Số</a></li>
+                    <li id="menu-item-6534"
+                        class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6534"><a
+                            href="https://new88.online/casino-new88/">Casino</a></li>
+                    <li id="menu-item-6530"
+                        class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6530"><a
+                            href="https://new88.online/the-thao-new88/">Thể Thao</a></li>
+                    <li id="menu-item-6531"
+                        class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6531"><a
+                            href="https://new88.online/ban-ca-new88/">Bắn Cá</a></li>
+                    <li id="menu-item-6532"
+                        class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6532"><a
+                            href="https://new88.online/da-ga-new88/">Đá Gà</a></li>
+                </ul>
+            </div>
+            <div class="menu-bar-items"></div>
+        </div>
+    </nav>
+    <nav class="has-branding main-navigation nav-align-center has-menu-bar-items sub-menu-right" id="site-navigation"
+        aria-label="Primary" itemtype="https://schema.org/SiteNavigationElement" itemscope>
+        <div class="inside-navigation">
+            <div class="navigation-branding">
+                <div class="site-logo">
+                    <a href="https://new88.online/" title="NEW88 TRANG CHÍNH THỨC | ĐĂNG NHẬP NEW88 | ĐĂNG KÝ NEW88"
+                        rel="home">
+                        <img class="header-image is-logo-image"
+                            alt="NEW88 TRANG CHÍNH THỨC | ĐĂNG NHẬP NEW88 | ĐĂNG KÝ NEW88"
+                            src="https://new88.online/wp-content/uploads/2023/06/logo-1.png"
+                            title="NEW88 TRANG CHÍNH THỨC | ĐĂNG NHẬP NEW88 | ĐĂNG KÝ NEW88" width="379" height="183"
+                            data-lazy-src="//new88.online/wp-content/uploads/2023/06/logo-1.png" /><noscript><img
+                                class="header-image is-logo-image"
+                                alt="NEW88 TRANG CHÍNH THỨC | ĐĂNG NHẬP NEW88 | ĐĂNG KÝ NEW88"
+                                src="//new88.online/wp-content/uploads/2023/06/logo-1.png"
+                                title="NEW88 TRANG CHÍNH THỨC | ĐĂNG NHẬP NEW88 | ĐĂNG KÝ NEW88" width="379"
+                                height="183" /></noscript>
+                    </a>
+                </div>
+            </div> <button class="menu-toggle" aria-controls="generate-slideout-menu" aria-expanded="false">
+                <span class="gp-icon icon-menu-bars"><svg viewbox="0 0 512 512" aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg" width="1em" height="1em">
+                        <path
+                            d="M0 96c0-13.255 10.745-24 24-24h464c13.255 0 24 10.745 24 24s-10.745 24-24 24H24c-13.255 0-24-10.745-24-24zm0 160c0-13.255 10.745-24 24-24h464c13.255 0 24 10.745 24 24s-10.745 24-24 24H24c-13.255 0-24-10.745-24-24zm0 160c0-13.255 10.745-24 24-24h464c13.255 0 24 10.745 24 24s-10.745 24-24 24H24c-13.255 0-24-10.745-24-24z" />
+                    </svg><svg viewbox="0 0 512 512" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="1em"
+                        height="1em">
+                        <path
+                            d="M71.029 71.029c9.373-9.372 24.569-9.372 33.942 0L256 222.059l151.029-151.03c9.373-9.372 24.569-9.372 33.942 0 9.372 9.373 9.372 24.569 0 33.942L289.941 256l151.03 151.029c9.372 9.373 9.372 24.569 0 33.942-9.373 9.372-24.569 9.372-33.942 0L256 289.941l-151.029 151.03c-9.373 9.372-24.569 9.372-33.942 0-9.372-9.373-9.372-24.569 0-33.942L222.059 256 71.029 104.971c-9.372-9.373-9.372-24.569 0-33.942z" />
+                    </svg></span><span class="mobile-menu">Menu</span> </button>
+            <div id="primary-menu" class="main-nav">
+                <ul id="menu-menu-1" class=" menu sf-menu">
+                    <li
+                        class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-6526">
+                        <a href="https://new88.online/" aria-current="page">Trang Chủ New88</a>
+                    </li>
+                    <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6533"><a
+                            href="https://new88.online/codemienphi/">Code New88</a></li>
+                    <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6527"><a
+                            href="https://new88.online/huong-dan/">Hướng Dẫn</a></li>
+                    <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6528"><a
+                            href="https://new88.online/trung-tam-khuyen-mai/">Khuyến Mãi</a></li>
+                    <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6529"><a
+                            href="https://new88.online/xo-so-new88/">Xổ Số</a></li>
+                    <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6534"><a
+                            href="https://new88.online/casino-new88/">Casino</a></li>
+                    <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6530"><a
+                            href="https://new88.online/the-thao-new88/">Thể Thao</a></li>
+                    <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6531"><a
+                            href="https://new88.online/ban-ca-new88/">Bắn Cá</a></li>
+                    <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6532"><a
+                            href="https://new88.online/da-ga-new88/">Đá Gà</a></li>
+                </ul>
+            </div>
+            <div class="menu-bar-items"></div>
+        </div>
+    </nav>
+    <div class="site grid-container container hfeed" id="page">
+        <div class="site-content" id="content">
+            <div class="content-area" id="primary">
+                <main class="site-main" id="main">
+                    <article id="post-5354" class="post-5354 page type-page status-publish infinite-scroll-item"
+                        itemtype="https://schema.org/CreativeWork" itemscope>
+                        <div class="inside-article">
+                            <div class="wrap-sv">
+                                <div class="sv-top">
+                                    <div class="sv-header display-center">
+                                        <img width="379" height="183" class="sv-logo"
+                                            src="https://new88.online/wp-content/uploads/2023/06/logo-1.png" alt="logo"
+                                            data-lazy-src="//new88.online/wp-content/uploads/trang-chu/assets/images/logo.png" /><noscript><img
+                                                width="379" height="183" class="sv-logo"
+                                                src="//new88.online/wp-content/uploads/trang-chu/assets/images/logo.png"
+                                                alt="logo" /></noscript>
+                                    </div>
+                                    <h1 class="sv-title">TRUNG TÂM DỊCH VỤ KHÁCH HÀNG</h1>
+                                    <div class="sv-block1-mobile">
+                                        <p class="sv-block1-text">NẾU BẠN KHÔNG TRUY CẬP ĐƯỢC VÀO <a
+                                                href="https://new88.com">NEW88.COM</a>
+                                            LIÊN HỆ VỚI CHÚNG TÔI QUA MAIL
+                                        </p>
+                                        <a class="sv-block1-btn display-center"
+                                            href="/cdn-cgi/l/email-protection#345550595d5a745a51430c0c1a575b59"><span
+                                                class="__cf_email__"
+                                                data-cfemail="e3a2878e8a8da3ad8694dbdbcd808c8e">[email&#160;protected]</span></a>
+                                    </div>
+                                    <div class="sv-container wrap-infohelp">
+                                        <div class="wrap-infohelp_client">
+                                            <a href="https://new88fun.com/CS_Naprut/" class="wrap-infohelp_client-item">
+                                                <div class="wrap-infohelp_client-item-title">HỖ TRỢ 24/7</div>
+                                                <div class="wrap-infohelp_client-item-icon display-center">
+                                                    <img width="63" height="63"
+                                                        src="https://new88.online/wp-content/uploads/trang-chu/assets/images/icon2.png"
+                                                        alt="ho tro"
+                                                        data-lazy-src="//new88.online/wp-content/uploads/trang-chu/assets/images/icon2.png" /><noscript><img
+                                                            width="63" height="63"
+                                                            src="//new88.online/wp-content/uploads/trang-chu/assets/images/icon2.png"
+                                                            alt="ho tro" /></noscript>
+                                                </div>
+                                                <div class="wrap-infohelp_client-item-name">NẠP-RÚT</div>
+                                            </a>
+                                            <a href="https://new88fun.com/CS_khuyenmai/"
+                                                class="wrap-infohelp_client-item">
+                                                <div class="wrap-infohelp_client-item-title">HỖ TRỢ 24/7</div>
+                                                <div class="wrap-infohelp_client-item-icon display-center">
+                                                    <img width="59" height="39"
+                                                        src="https://new88.online/wp-content/uploads/trang-chu/assets/images/icon3.png"
+                                                        alt="ho tro"
+                                                        data-lazy-src="//new88.online/wp-content/uploads/trang-chu/assets/images/icon3.png" /><noscript><img
+                                                            width="59" height="39"
+                                                            src="//new88.online/wp-content/uploads/trang-chu/assets/images/icon3.png"
+                                                            alt="ho tro" /></noscript>
+                                                </div>
+                                                <div class="wrap-infohelp_client-item-name">KHUYẾN MÃI</div>
+                                            </a>
+                                            <a href="https://new88fun.com/CS_vandekhac/"
+                                                class="wrap-infohelp_client-item">
+                                                <div class="wrap-infohelp_client-item-title">HỖ TRỢ 24/7</div>
+                                                <div class="wrap-infohelp_client-item-icon display-center">
+                                                    <img width="63" height="63"
+                                                        src="https://new88.online/wp-content/uploads/trang-chu/assets/images/icon6.png"
+                                                        alt="ho tro"
+                                                        data-lazy-src="//new88.online/wp-content/uploads/trang-chu/assets/images/icon6.png" /><noscript><img
+                                                            width="63" height="63"
+                                                            src="//new88.online/wp-content/uploads/trang-chu/assets/images/icon6.png"
+                                                            alt="ho tro" /></noscript>
+                                                </div>
+                                                <div class="wrap-infohelp_client-item-name">VẤN ĐỀ KHÁC</div>
+                                            </a>
+                                            <a href="tel:+84704999988" class="wrap-infohelp_client-item">
+                                                <div class="wrap-infohelp_client-item-title">HOTLINE 24/7</div>
+                                                <div class="wrap-infohelp_client-item-icon display-center">
+                                                    <img width="63" height="64"
+                                                        src="https://new88.online/wp-content/uploads/trang-chu/assets/images/icon1.png"
+                                                        alt="ho tro"
+                                                        data-lazy-src="//new88.online/wp-content/uploads/trang-chu/assets/images/icon1.png" /><noscript><img
+                                                            width="63" height="64"
+                                                            src="//new88.online/wp-content/uploads/trang-chu/assets/images/icon1.png"
+                                                            alt="ho tro" /></noscript>
+                                                </div>
+                                                <div class="wrap-infohelp_client-item-name">GỌI TỔNG ĐÀI</div>
+                                            </a>
+                                            <a href="https://new88fun.com/fbnew88/" class="wrap-infohelp_client-item">
+                                                <div class="wrap-infohelp_client-item-title">HỖ TRỢ 24/7</div>
+                                                <div class="wrap-infohelp_client-item-icon display-center">
+                                                    <img width="65" height="66"
+                                                        src="https://new88.online/wp-content/uploads/trang-chu/assets/images/icon4.png"
+                                                        alt="ho tro"
+                                                        data-lazy-src="//new88.online/wp-content/uploads/trang-chu/assets/images/icon4.png" /><noscript><img
+                                                            width="65" height="66"
+                                                            src="//new88.online/wp-content/uploads/trang-chu/assets/images/icon4.png"
+                                                            alt="ho tro" /></noscript>
+                                                </div>
+                                                <div class="wrap-infohelp_client-item-name">FACEBOOK</div>
+                                            </a>
+                                            <a href="https://new88fun.com/CS_Khieunai/"
+                                                class="wrap-infohelp_client-item">
+                                                <div class="wrap-infohelp_client-item-title">HỖ TRỢ 24/7</div>
+                                                <div class="wrap-infohelp_client-item-icon display-center">
+                                                    <img width="63" height="64"
+                                                        src="https://new88.online/wp-content/uploads/trang-chu/assets/images/icon5.png"
+                                                        alt="ho tro"
+                                                        data-lazy-src="//new88.online/wp-content/uploads/trang-chu/assets/images/icon5.png" /><noscript><img
+                                                            width="63" height="64"
+                                                            src="//new88.online/wp-content/uploads/trang-chu/assets/images/icon5.png"
+                                                            alt="ho tro" /></noscript>
+                                                </div>
+                                                <div class="wrap-infohelp_client-item-name">KHIẾU NẠI</div>
+                                            </a>
+                                        </div>
+                                        <div class="wrap-infohelp_social">
+                                            <div class="wrap-infohelp_social-title">
+                                                Cập nhật tin khuyến mãi <span>NEW88</span> mới nhất
+                                            </div>
+                                            <div class="wrap-infohelp_social_wrap-item">
+                                                <a href="https://new88fun.com/fbnew88/"
+                                                    class="wrap-infohelp_social-item" target="_blank">
+                                                    <img width="118" height="118"
+                                                        class="wrap-infohelp_social-item_current"
+                                                        src="https://new88.online/wp-content/uploads/trang-chu/assets/images/fb.png"
+                                                        alt="facebook"
+                                                        data-lazy-src="//new88.online/wp-content/uploads/trang-chu/assets/images/fb.png" /><noscript><img
+                                                            width="118" height="118"
+                                                            class="wrap-infohelp_social-item_current"
+                                                            src="//new88.online/wp-content/uploads/trang-chu/assets/images/fb.png"
+                                                            alt="facebook" /></noscript>
+                                                    <img width="400" height="531"
+                                                        class="wrap-infohelp_social-item_hover wrap-infohelp_social-item_hover entered lazyloaded"
+                                                        src="https://new88.online/wp-content/uploads/trang-chu/assets/images/fb-hover.png"
+                                                        alt="facebook"
+                                                        data-lazy-src="//new88.online/wp-content/uploads/trang-chu/assets/images/fb-hover.png" /><noscript><img
+                                                            width="400" height="531"
+                                                            class="wrap-infohelp_social-item_hover"
+                                                            src="//new88.online/wp-content/uploads/trang-chu/assets/images/fb-hover.png"
+                                                            alt="facebook" /></noscript>
+                                                </a>
+                                                <a href="https://new88fun.com/ytbnew88/"
+                                                    class="wrap-infohelp_social-item" target="_blank">
+                                                    <img width="119" height="118"
+                                                        class="wrap-infohelp_social-item_current"
+                                                        src="https://new88.online/wp-content/uploads/trang-chu/assets/images/youtube.png"
+                                                        alt="youtube"
+                                                        data-lazy-src="//new88.online/wp-content/uploads/trang-chu/assets/images/youtube.png" /><noscript><img
+                                                            width="119" height="118"
+                                                            class="wrap-infohelp_social-item_current"
+                                                            src="//new88.online/wp-content/uploads/trang-chu/assets/images/youtube.png"
+                                                            alt="youtube" /></noscript>
+                                                    <img width="400" height="531"
+                                                        class="wrap-infohelp_social-item_hover wrap-infohelp_social-item_hover entered lazyloaded"
+                                                        src="https://new88.online/wp-content/uploads/trang-chu/assets/images/youtube-hover.png"
+                                                        alt="youtube"
+                                                        data-lazy-src="//new88.online/wp-content/uploads/trang-chu/assets/images/youtube-hover.png" /><noscript><img
+                                                            width="400" height="531"
+                                                            class="wrap-infohelp_social-item_hover"
+                                                            src="//new88.online/wp-content/uploads/trang-chu/assets/images/youtube-hover.png"
+                                                            alt="youtube" /></noscript>
+                                                </a>
+                                                <a href="https://new88fun.com/Telegram_n88/"
+                                                    class="wrap-infohelp_social-item" target="_blank">
+                                                    <img width="118" height="118"
+                                                        class="wrap-infohelp_social-item_current"
+                                                        src="https://new88.online/wp-content/uploads/trang-chu/assets/images/tele.png"
+                                                        alt="tele"
+                                                        data-lazy-src="//new88.online/wp-content/uploads/trang-chu/assets/images/tele.png" /><noscript><img
+                                                            width="118" height="118"
+                                                            class="wrap-infohelp_social-item_current"
+                                                            src="//new88.online/wp-content/uploads/trang-chu/assets/images/tele.png"
+                                                            alt="tele" /></noscript>
+                                                    <img width="400" height="531"
+                                                        class="wrap-infohelp_social-item_hover wrap-infohelp_social-item_hover entered lazyloaded"
+                                                        src="https://new88.online/wp-content/uploads/trang-chu/assets/images/tele-hover.png"
+                                                        alt="tele"
+                                                        data-lazy-src="//new88.online/wp-content/uploads/trang-chu/assets/images/tele-hover.png" /><noscript><img
+                                                            width="400" height="531"
+                                                            class="wrap-infohelp_social-item_hover"
+                                                            src="//new88.online/wp-content/uploads/trang-chu/assets/images/tele-hover.png"
+                                                            alt="tele" /></noscript>
+                                                </a>
+                                                <a href="https://new88.site//" class="wrap-infohelp_social-item"
+                                                    target="_blank">
+                                                    <img width="119" height="118"
+                                                        class="wrap-infohelp_social-item_current"
+                                                        src="https://new88.online/wp-content/uploads/trang-chu/assets/images/dowload.png"
+                                                        alt="download"
+                                                        data-lazy-src="//new88.online/wp-content/uploads/trang-chu/assets/images/dowload.png" /><noscript><img
+                                                            width="119" height="118"
+                                                            class="wrap-infohelp_social-item_current"
+                                                            src="//new88.online/wp-content/uploads/trang-chu/assets/images/dowload.png"
+                                                            alt="download" /></noscript>
+                                                    <img width="400" height="531"
+                                                        class="wrap-infohelp_social-item_hover wrap-infohelp_social-item_hover entered lazyloaded"
+                                                        src="https://new88.online/wp-content/uploads/trang-chu/assets/images/dowload-hover.png"
+                                                        alt="download"
+                                                        data-lazy-src="//new88.online/wp-content/uploads/trang-chu/assets/images/dowload-hover.png" /><noscript><img
+                                                            width="400" height="531"
+                                                            class="wrap-infohelp_social-item_hover"
+                                                            src="//new88.online/wp-content/uploads/trang-chu/assets/images/dowload-hover.png"
+                                                            alt="download" /></noscript>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="sv-container sv-locale">
+                                        <div class="sv-locale-title">
+                                            <svg width="236" height="11" viewbox="0 0 236 11" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M227.092 10.9058H235.754L224.549 0H0.5V1.82573H218.009L227.092 10.9058Z"
+                                                    fill="#FEAD00" />
+                                            </svg>
+                                            <p>CÁC ĐƯỜNG TRUYỀN TỐC ĐỘ CAO</p>
+                                            <svg width="236" height="11" viewbox="0 0 236 11" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M8.90759 10.9058H0.246277L11.4508 0H235.5V1.82573H17.9909L8.90759 10.9058Z"
+                                                    fill="#FEAD00" />
+                                            </svg>
+                                        </div>
+                                        <div class="sv-locale_wrap-item">
+                                            <a href="https://www.88new.cc/" class="sv-locale-item" target="_blank">
+                                                CẦN THƠ
+                                            </a>
+                                            <a href="https://www.new881.com/" class="sv-locale-item" target="_blank">
+                                                ĐÀ NẴNG
+                                            </a>
+                                            <a href="https://www.new8811.com/" class="sv-locale-item" target="_blank">
+                                                HỒ CHÍ MINH
+                                            </a>
+                                            <a href="https://www.new8855.com/" class="sv-locale-item" target="_blank">
+                                                PHÚ QUỐC
+                                            </a>
+                                            <a href="https://www.new88w.com/" class="sv-locale-item" target="_blank">
+                                                NHA TRANG
+                                            </a>
+                                            <a href="https://new88fun.com/link_new88_hanoi" class="sv-locale-item"
+                                                target="_blank">
+                                                HÀ NỘI
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="sv-container sv-block1">
+                                    <img width="384" height="322"
+                                        src="https://new88.online/wp-content/uploads/2023/06/nhanvat-1.webp"
+                                        alt="rollbar"
+                                        data-lazy-src="//new88.online/wp-content/uploads/2023/06/nhanvat-1.webp"><noscript><img
+                                            width="384" height="322"
+                                            src="//new88.online/wp-content/uploads/2023/06/nhanvat-1.webp"
+                                            alt="rollbar"></noscript>
+                                    <div class="sv-block1_wrap-content">
+                                        <p class="sv-block1-text">NẾU BẠN KHÔNG TRUY CẬP ĐƯỢC VÀO <a
+                                                href="https://new88.com">NEW88.COM</a>
+                                            LIÊN HỆ VỚI CHÚNG TÔI QUA MAIL
+                                        </p>
+                                        <a class="sv-block1-btn display-center"
+                                            href="/cdn-cgi/l/email-protection#bddcd9d0d4d3fdd3d8ca858593ded2d0"><span
+                                                class="__cf_email__"
+                                                data-cfemail="7c3d181115123c32190b4444521f1311">Admin@New88.com</span></a>
+                                    </div>
+                                </div>
+                                <div class="sv-games">
+                                    <div class="sv-container sv-games-title">
+                                        <svg width="236" height="11" viewbox="0 0 236 11" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M227.092 10.9058H235.754L224.549 0H0.5V1.82573H218.009L227.092 10.9058Z"
+                                                fill="#FEAD00" />
+                                        </svg>
+                                        <span>CÁC TRÒ CHƠI NỔI BẬT</span>
+                                        <svg width="236" height="11" viewbox="0 0 236 11" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M8.90759 10.9058H0.246277L11.4508 0H235.5V1.82573H17.9909L8.90759 10.9058Z"
+                                                fill="#FEAD00" />
+                                        </svg>
+                                    </div>
+                                    <div class="sv-container sv-games-rollbar">
+                                        <img width="98" height="98"
+                                            src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2098%2098'%3E%3C/svg%3E"
+                                            alt="rollbar"
+                                            data-lazy-src="//new88.online/wp-content/uploads/trang-chu/assets/images/game1.png" /><noscript><img
+                                                width="98" height="98"
+                                                src="//new88.online/wp-content/uploads/trang-chu/assets/images/game1.png"
+                                                alt="rollbar" /></noscript>
+                                        <img width="98" height="98"
+                                            src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2098%2098'%3E%3C/svg%3E"
+                                            alt="rollbar"
+                                            data-lazy-src="//new88.online/wp-content/uploads/trang-chu/assets/images/game2.png" /><noscript><img
+                                                width="98" height="98"
+                                                src="//new88.online/wp-content/uploads/trang-chu/assets/images/game2.png"
+                                                alt="rollbar" /></noscript>
+                                        <img width="98" height="98"
+                                            src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2098%2098'%3E%3C/svg%3E"
+                                            alt="rollbar"
+                                            data-lazy-src="//new88.online/wp-content/uploads/trang-chu/assets/images/game3.png" /><noscript><img
+                                                width="98" height="98"
+                                                src="//new88.online/wp-content/uploads/trang-chu/assets/images/game3.png"
+                                                alt="rollbar" /></noscript>
+                                        <img width="97" height="97"
+                                            src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2097%2097'%3E%3C/svg%3E"
+                                            alt="rollbar"
+                                            data-lazy-src="//new88.online/wp-content/uploads/trang-chu/assets/images/game4.png" /><noscript><img
+                                                width="97" height="97"
+                                                src="//new88.online/wp-content/uploads/trang-chu/assets/images/game4.png"
+                                                alt="rollbar" /></noscript>
+                                        <img width="97" height="97"
+                                            src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2097%2097'%3E%3C/svg%3E"
+                                            alt="rollbar"
+                                            data-lazy-src="//new88.online/wp-content/uploads/trang-chu/assets/images/game5.png" /><noscript><img
+                                                width="97" height="97"
+                                                src="//new88.online/wp-content/uploads/trang-chu/assets/images/game5.png"
+                                                alt="rollbar" /></noscript>
+                                        <img width="97" height="97"
+                                            src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2097%2097'%3E%3C/svg%3E"
+                                            alt="rollbar"
+                                            data-lazy-src="//new88.online/wp-content/uploads/trang-chu/assets/images/game6.png" /><noscript><img
+                                                width="97" height="97"
+                                                src="//new88.online/wp-content/uploads/trang-chu/assets/images/game6.png"
+                                                alt="rollbar" /></noscript>
+                                        <img width="97" height="97"
+                                            src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2097%2097'%3E%3C/svg%3E"
+                                            alt="rollbar"
+                                            data-lazy-src="//new88.online/wp-content/uploads/trang-chu/assets/images/game7.png" /><noscript><img
+                                                width="97" height="97"
+                                                src="//new88.online/wp-content/uploads/trang-chu/assets/images/game7.png"
+                                                alt="rollbar" /></noscript>
+                                    </div>
+                                </div>
+                                <div class="sv-container sv-block2">
+                                    <div class="sv-block2-title">
+                                        HỎI ĐÁP VỀ NEW88
+                                    </div>
+                                    <div class="sv-block2-des">
+                                        Dưới đây là một vài câu hỏi của người chơi được chúng tôi tổng hợp lại.
+                                        Nếu có bất kỳ thắc mắc sẽ được giải đáp chi tiết nhất.
+                                    </div>
+                                    <div class="sv-block2-btn sv-block2-btn_viewAll display-center">
+                                        XEM CHI TIẾT
+                                    </div>
+                                    <div style="display: none;" class="sv-block2_view-detail">
+                                        <div class="sv-block2_view-detail_text-1">VỀ CHÚNG TÔI</div>
+                                        <div class="sv-block2_view-detail_text-1">NEW88 - NƠI CẢM XÚC KHÔNG GIỚI HẠN
+                                        </div>
+                                        <div class="sv-block2_view-detail_text-1">Giải Trí - Hợp Pháp - Bảo Mật</div>
+                                        <div class="sv-block2_view-detail_text-2">
+                                            NEW88.COM là một công ty giải trí được đăng ký hợp pháp ở Costa Rica, tất cả
+                                            các hoạt động kinh doanh cá
+                                            cược
+                                            đều tuân theo hiệp ước cá cược của chính phủ Costa Rica. Trong thị trường cá
+                                            cược trực tuyến ngày càng
+                                            sôi nổi
+                                            và được đông đảo người chơi lựa chọn, chúng tôi không ngừng tìm kiếm những
+                                            đổi mới và thay đổi, và chúng
+                                            tôi
+                                            phát triển các phương pháp trò chơi khác nhau với đội ngũ sáng tạo đáng tự
+                                            hào của chúng tôi. Cung cấp
+                                            cho
+                                            khách
+                                            hàng nhiều sự lựa chọn, lĩnh vực chính của công ty NEW88.COM chúng tôi là
+                                            cung cập các sản phẩm giải trí
+                                            kích
+                                            thích, chu đáo và dịch vụ chất lượng cao, có tỉ lệ thắng lớn.
+                                        </div>
+                                        <div class="sv-block2_view-detail_text-1">Đa dạng về sản phẩm</div>
+                                        <div class="sv-block2_view-detail_scrollBar">
+                                            <li> <img
+                                                    src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2091%200'%3E%3C/svg%3E"
+                                                    width="91px" alt="nohu"
+                                                    data-lazy-src="//new88.online/wp-content/uploads/2023/06/nohu.webp"><noscript><img
+                                                        src="//new88.online/wp-content/uploads/2023/06/nohu.webp"
+                                                        width="91px" alt="nohu"></noscript> </li>
+                                            <li> <img
+                                                    src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2091%200'%3E%3C/svg%3E"
+                                                    width="91px" alt=" the thao"
+                                                    data-lazy-src="//new88.online/wp-content/uploads/2023/06/thethao.webp"><noscript><img
+                                                        src="//new88.online/wp-content/uploads/2023/06/thethao.webp"
+                                                        width="91px" alt=" the thao"></noscript> </li>
+                                            <li> <img
+                                                    src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2091%200'%3E%3C/svg%3E"
+                                                    width="91px" alt="tai xiu"
+                                                    data-lazy-src="//new88.online/wp-content/uploads/2023/06/taixiu.webp"><noscript><img
+                                                        src="//new88.online/wp-content/uploads/2023/06/taixiu.webp"
+                                                        width="91px" alt="tai xiu"></noscript> </li>
+                                            <li> <img
+                                                    src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2091%200'%3E%3C/svg%3E"
+                                                    width="91px" alt="xoc dia"
+                                                    data-lazy-src="//new88.online/wp-content/uploads/2023/06/xocdia.webp"><noscript><img
+                                                        src="//new88.online/wp-content/uploads/2023/06/xocdia.webp"
+                                                        width="91px" alt="xoc dia"></noscript> </li>
+                                            <li> <img
+                                                    src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2091%200'%3E%3C/svg%3E"
+                                                    width="91px" alt="xoso"
+                                                    data-lazy-src="//new88.online/wp-content/uploads/2023/06/xoso.webp"><noscript><img
+                                                        src="//new88.online/wp-content/uploads/2023/06/xoso.webp"
+                                                        width="91px" alt="xoso"></noscript> </li>
+                                            <li> <img
+                                                    src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2091%200'%3E%3C/svg%3E"
+                                                    width="91px" alt="ban ca"
+                                                    data-lazy-src="//new88.online/wp-content/uploads/2023/06/banca.webp"><noscript><img
+                                                        src="//new88.online/wp-content/uploads/2023/06/banca.webp"
+                                                        width="91px" alt="ban ca"></noscript> </li>
+                                            <li> <img
+                                                    src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2091%200'%3E%3C/svg%3E"
+                                                    width="91px" alt="casino"
+                                                    data-lazy-src="//new88.online/wp-content/uploads/2023/06/casino.webp"><noscript><img
+                                                        src="//new88.online/wp-content/uploads/2023/06/casino.webp"
+                                                        width="91px" alt="casino"></noscript> </li>
+                                            <li> <img
+                                                    src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2091%200'%3E%3C/svg%3E"
+                                                    width="91px" alt="da ga"
+                                                    data-lazy-src="//new88.online/wp-content/uploads/2023/06/daga.webp"><noscript><img
+                                                        src="//new88.online/wp-content/uploads/2023/06/daga.webp"
+                                                        width="91px" alt="da ga"></noscript> </li>
+                                        </div>
+                                        <div class="sv-block2_view-detail_text-1">Nạp tiền, rút tiền siêu tốc</div>
+                                        <img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20100%200'%3E%3C/svg%3E"
+                                            width="100%"
+                                            data-lazy-src="//new88.online/wp-content/uploads/2023/06/banne1.webp"><noscript><img
+                                                src="//new88.online/wp-content/uploads/2023/06/banne1.webp"
+                                                width="100%"></noscript>
+                                        <div class="sv-block2_view-detail_text-2">
+                                            NEW88 sở hữu đội ngũ kỹ thuật hùng mạnh với tư duy sáng tạo cao đã sáng tạo
+                                            ra công nghệ nạp rút tiền
+                                            tích hợp
+                                            cộng nghệ API ngân hàng, xử lý hoàn toàn tự động hàng ngàn giao dịch cùng
+                                            một lúc chỉ mất thời gian 3-5
+                                            phút.
+                                            Không giới hạn số lần rút tiền, hỗ trợ tối đa lên đến 10 tỷ một ngày.
+                                        </div>
+                                        <div class="sv-block2_view-detail_text-1">Dịch vụ chăm sóc khách hàng 24/7 Nhiệt
+                                            Tình - Thân Thiện - Chuyên
+                                            Nghiệp</div>
+                                        <div class="sv-block2_view-detail_text-2">
+                                            Chân Thành Đối Đãi, Dùng Tín Phục Người, Tận Tâm Phục Vụ, Khách Hàng Tín
+                                            Nhiệm Và Hài Lòng luôn là mục
+                                            tiêu và
+                                            kim chỉ nam duy nhất cho mọi hoạt động của chúng tôi! Đội ngũ chăm sóc khách
+                                            hàng NEW88 hoạt động xuyên
+                                            suốt
+                                            365
+                                            ngày thông qua nhiều kênh hỗ trợ khách nhau như Facebook, Chát trực tiếp,
+                                            Telegram, Zalo, Hotline...
+                                            luôn sẵn
+                                            sàng hỗ trợ tất cả mọi vấn đề khi khách hàng gặp phải.
+                                        </div>
+                                        <div class="sv-block2_view-detail_text-1">Bảo mật thông tin khách hàng</div>
+                                        <div class="sv-block2_view-detail_text-2">
+                                            Tất cả thông tin cá nhân cung cấp bởi những người sử dụng được chuyển bằng
+                                            phần mềm Bảo mật (theo tiêu
+                                            chuẩn
+                                            bảo
+                                            mật SSL 128bit) và được lưu giữ trong môi trường hoạt động an toàn và không
+                                            ai có thể xâm nhập vào được.
+                                            Sự
+                                            truy
+                                            nhập nội bộ vào dữ liệu được giới hạn và kiểm soát nghiêm ngặt máy chủ được
+                                            đặt tại nước ngoài đảm bảo
+                                            an toàn
+                                            tuyệt đối cho thành viên tham gia.
+                                        </div>
+                                        <div class="sv-block2_view-detail_text-1">Nhiều chương trình khuyến mãi hấp dẫn
+                                        </div>
+                                        <div class="sv-block2_view-detail_text-2">
+                                            Để cảm ơn tất cả những khách hàng luôn tin tưởng và gắn bó lâu dài cùng
+                                            NEW88, chúng tôi luôn dành cho
+                                            khách
+                                            hàng những ưu đãi đặc biệt nhất, và luôn đảm bảo quyền lợi cho khách hàng
+                                            khi tham gia tại NEW88.COM một
+                                            số
+                                            chương trình tiêu biểu như:
+                                            <br />
+                                            + Phát tiền thưởng nghìn tỷ 06 hàng tháng <br />
+                                            + Phát thưởng Ngày hội thành viên 16 hàng tháng <br />
+                                            + Phát thưởng lì xì bí mật 26 hàng tháng <br />
+                                            + Hoàn trả ngay lập tức <br />
+                                            + Tặng thưởng ngày vàng 09,19,29 hàng tháng <br />
+                                            + Tặng thưởng thành viên tham gia cược nhiều <br />
+                                            + Thưởng điểm danh <br />
+                                            + Thưởng nhiệm vụ kỳ <br />
+                                            + Ngoài ra còn rất nhiều chương trình khuyến mãi hấp dẫn khác <br />
+                                        </div>
+                                        <div class="sv-block2_view-detail_text-2">Những hoặc động cùng NEW88</div>
+                                        <div class="sv-block2_view-detail_images"> <img width="1280" height="960"
+                                                src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201280%20960'%3E%3C/svg%3E"
+                                                alt="slide"
+                                                data-lazy-src="//new88.online/wp-content/uploads/2023/06/img1.webp"><noscript><img
+                                                    width="1280" height="960"
+                                                    src="//new88.online/wp-content/uploads/2023/06/img1.webp"
+                                                    alt="slide"></noscript>
+                                            <img width="1280" height="853"
+                                                src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201280%20853'%3E%3C/svg%3E"
+                                                alt="slide"
+                                                data-lazy-src="//new88.online/wp-content/uploads/2023/06/img2.webp"><noscript><img
+                                                    width="1280" height="853"
+                                                    src="//new88.online/wp-content/uploads/2023/06/img2.webp"
+                                                    alt="slide"></noscript>
+                                            <img width="1280" height="853"
+                                                src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201280%20853'%3E%3C/svg%3E"
+                                                alt="slide"
+                                                data-lazy-src="//new88.online/wp-content/uploads/2023/06/img3.webp"><noscript><img
+                                                    width="1280" height="853"
+                                                    src="//new88.online/wp-content/uploads/2023/06/img3.webp"
+                                                    alt="slide"></noscript>
+                                            <img width="1280" height="853"
+                                                src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201280%20853'%3E%3C/svg%3E"
+                                                alt="slide"
+                                                data-lazy-src="//new88.online/wp-content/uploads/2023/06/img4.webp"><noscript><img
+                                                    width="1280" height="853"
+                                                    src="//new88.online/wp-content/uploads/2023/06/img4.webp"
+                                                    alt="slide"></noscript>
+                                            <img width="1280" height="851"
+                                                src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201280%20851'%3E%3C/svg%3E"
+                                                alt="slide"
+                                                data-lazy-src="//new88.online/wp-content/uploads/2023/06/img5.webp"><noscript><img
+                                                    width="1280" height="851"
+                                                    src="//new88.online/wp-content/uploads/2023/06/img5.webp"
+                                                    alt="slide"></noscript>
+                                            <img width="1280" height="853"
+                                                src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201280%20853'%3E%3C/svg%3E"
+                                                alt="slide"
+                                                data-lazy-src="//new88.online/wp-content/uploads/2023/06/img6.webp"><noscript><img
+                                                    width="1280" height="853"
+                                                    src="//new88.online/wp-content/uploads/2023/06/img6.webp"
+                                                    alt="slide"></noscript>
+                                            <img width="1280" height="853"
+                                                src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201280%20853'%3E%3C/svg%3E"
+                                                alt="slide"
+                                                data-lazy-src="//new88.online/wp-content/uploads/2023/06/img7.webp"><noscript><img
+                                                    width="1280" height="853"
+                                                    src="//new88.online/wp-content/uploads/2023/06/img7.webp"
+                                                    alt="slide"></noscript>
+                                            <img width="1280" height="853"
+                                                src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201280%20853'%3E%3C/svg%3E"
+                                                alt="slide"
+                                                data-lazy-src="//new88.online/wp-content/uploads/2023/06/img8.webp"><noscript><img
+                                                    width="1280" height="853"
+                                                    src="//new88.online/wp-content/uploads/2023/06/img8.webp"
+                                                    alt="slide"></noscript>
+                                            <img width="1280" height="720"
+                                                src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201280%20720'%3E%3C/svg%3E"
+                                                alt="slide"
+                                                data-lazy-src="//new88.online/wp-content/uploads/2023/06/img9.webp"><noscript><img
+                                                    width="1280" height="720"
+                                                    src="//new88.online/wp-content/uploads/2023/06/img9.webp"
+                                                    alt="slide"></noscript>
+                                            <img width="1280" height="720"
+                                                src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201280%20720'%3E%3C/svg%3E"
+                                                alt="slide"
+                                                data-lazy-src="//new88.online/wp-content/uploads/2023/06/img10.webp"><noscript><img
+                                                    width="1280" height="720"
+                                                    src="//new88.online/wp-content/uploads/2023/06/img10.webp"
+                                                    alt="slide"></noscript>
+                                            <img width="1280" height="960"
+                                                src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201280%20960'%3E%3C/svg%3E"
+                                                alt="slide"
+                                                data-lazy-src="//new88.online/wp-content/uploads/2023/06/img11.webp"><noscript><img
+                                                    width="1280" height="960"
+                                                    src="//new88.online/wp-content/uploads/2023/06/img11.webp"
+                                                    alt="slide"></noscript>
+                                            <img width="1280" height="853"
+                                                src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201280%20853'%3E%3C/svg%3E"
+                                                alt="slide"
+                                                data-lazy-src="//new88.online/wp-content/uploads/2023/06/img12.webp"><noscript><img
+                                                    width="1280" height="853"
+                                                    src="//new88.online/wp-content/uploads/2023/06/img12.webp"
+                                                    alt="slide"></noscript>
+                                        </div>
+                                    </div>
+                                    <div style="display: none; margin-top: 20px;"
+                                        class="sv-block2-btn sv-block2-btn_hidden display-center">
+                                        THU GỌN
+                                    </div>
+                                    <div class="sv-block2-title">
+                                        KẾT LUẬN
+                                    </div>
+                                    <div class="sv-block2-des">
+                                        Những điều bạn cần hiểu và biết về nhà cái New88 đã được đề cập khá cụ thể.
+                                        Đây là một nhà cái cực kỳ uy tín và an toàn cho người chơi cá cược.
+                                        Nhanh tay đăng ký ngay một tài khoản để chơi ngay nào!!!
+                                    </div>
+                                    <div class="sv-block2-title">
+                                        ĐĂNG KÝ
+                                    </div>
+                                    <div class="sv-block2-des">
+                                        Các bạn hãy truy cập ngay vào link <a href="https://new88.vip">NEW88.VIP</a>
+                                        Đăng ký ngay cho mình một tài khoản để thỏa sức đam mê mình nhé
+                                    </div>
+                                </div>
+                                <div class="sv-container sv-block3">
+                                    <div class="sv-block2-title">
+                                        CODE6688
+                                    </div>
+                                    <div class="sv-block2-des">
+                                        NEW88 dành tặng mỗi tài khoản 1 code mỗi ngày.
+                                        <p>
+                                        </p>
+                                    </div>
+                                    <div class="sv-block2-btn sv-block3-getCode display-center" id="btnGetCode"
+                                        onclick="if (!window.__cfRLUnblockHandlers) return false; onGetCodeClick()"
+                                        data-cf-modified-2459de4dd970afc376a08530->
+                                        NHẬN CODE
+                                    </div>
+                                </div>
+                                <div class="sv-footer sv-footer-pc">
+                                    <div class="sv-container">
+                                        <div class="sv-footer-top">
+                                            <img width="379" height="183" class="sv-footer-logo"
+                                                src="https://new88.online/wp-content/uploads/2023/06/logo-1.png" alt
+                                                data-lazy-src="//new88.online/wp-content/uploads/trang-chu/assets/images/logo.png"><noscript><img
+                                                    width="379" height="183" class="sv-footer-logo"
+                                                    src="//new88.online/wp-content/uploads/trang-chu/assets/images/logo.png"
+                                                    alt=""></noscript>
+                                            <div class="sv-footer-dmca">
+                                                <a href="https://www.dmca.com/r/eg2z311">
+                                                    <img width="251" height="126"
+                                                        src="https://new88.online/wp-content/uploads/trang-chu/assets/images/dmca.png"
+                                                        alt alt="DMCA"
+                                                        data-lazy-src="//new88.online/wp-content/uploads/trang-chu/assets/images/dmca.png" /><noscript><img
+                                                            width="251" height="126"
+                                                            src="//new88.online/wp-content/uploads/trang-chu/assets/images/dmca.png"
+                                                            alt="" alt="DMCA" /></noscript>
+                                                </a>
+                                                <p>
+                                                    New88 mảng game online của nhà cái M.A.N. <br />
+                                                    Bao gồm các trò chơi trực tuyến baccarat, rồng hổ,
+                                                    xì dách, game nổ hủ, bắn cá, xóc dĩa, thể thao điện tử...
+                                                </p>
+                                            </div>
+                                            <div class="sv-footer_center-help">
+                                                <div class="sv-footer_center-help-title">TRUNG TÂM TRỢ GIÚP</div>
+                                                <a href="https://new88.online/" class="sv-footer_center-help-name">Liên
+                                                    hệ New88</a>
+                                                <a href="https://new88.online/" class="sv-footer_center-help-name">Đại
+                                                    lý</a>
+                                                <a href="https://new88.online/" class="sv-footer_center-help-name">Chính
+                                                    sách và bảo mật</a>
+                                                <a href="https://new88.online/" class="sv-footer_center-help-name">Điều
+                                                    khoản điều kiện</a>
+                                                <a href="https://new88.online/" class="sv-footer_center-help-name">Câu
+                                                    hỏi thường gặp</a>
+                                                <a href="https://new88.online/" class="sv-footer_center-help-name">Miễn
+                                                    trách nhiệm</a>
+                                                <a href="https://new88.online/" class="sv-footer_center-help-name">Chơi
+                                                    có trách nhiệm</a>
+                                            </div>
+                                        </div>
+                                        <div class="sv-footer-partner">
+                                            <div class="sv-footer-partner-title">Với Các Đối Tác</div>
+                                            <img width="1200" height="102"
+                                                src="https://new88.online/wp-content/uploads/2023/06/partner.webp"
+                                                alt="Doi tac"
+                                                data-lazy-src="//new88.online/wp-content/uploads/2023/06/partner.webp" /><noscript><img
+                                                    width="1200" height="102"
+                                                    src="//new88.online/wp-content/uploads/2023/06/partner.webp"
+                                                    alt="Doi tac" /></noscript>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="sv-footer sv-footer-mobile sv-container">
+                                    <div class="sv-footer-left">
+                                        <div class="sv-footer-left_wrap-logo">
+                                            <img width="379" height="183" class="sv-footer-logo"
+                                                src="https://new88.online/wp-content/uploads/2023/06/logo-1.png" alt
+                                                data-lazy-src="//new88.online/wp-content/uploads/trang-chu/assets/images/logo.png"><noscript><img
+                                                    width="379" height="183" class="sv-footer-logo"
+                                                    src="//new88.online/wp-content/uploads/trang-chu/assets/images/logo.png"
+                                                    alt=""></noscript>
+                                            <div class="sv-footer-dmca">
+                                                <a href="https://www.dmca.com/r/eg2z311">
+                                                    <img width="251" height="126"
+                                                        src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20251%20126'%3E%3C/svg%3E"
+                                                        alt="DMCA"
+                                                        data-lazy-src="//new88.online/wp-content/uploads/trang-chu/assets/images/dmca.png" /><noscript><img
+                                                            width="251" height="126"
+                                                            src="//new88.online/wp-content/uploads/trang-chu/assets/images/dmca.png"
+                                                            alt="DMCA" /></noscript>
+                                                </a>
+                                                <p>
+                                                    New88 mảng game online của nhà cái M.A.N. <br />
+                                                    Bao gồm các trò chơi trực tuyến baccarat, rồng hổ,
+                                                    xì dách, game nổ hủ, bắn cá, xóc dĩa, thể thao điện tử...
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="sv-footer-partner">
+                                            <div class="sv-footer-partner-title">Với Các Đối Tác</div>
+                                            <img width="1200" height="102"
+                                                src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201200%20102'%3E%3C/svg%3E"
+                                                alt="Doi tac"
+                                                data-lazy-src="//new88.online/wp-content/uploads/2023/06/partner.webp" /><noscript><img
+                                                    width="1200" height="102"
+                                                    src="//new88.online/wp-content/uploads/2023/06/partner.webp"
+                                                    alt="Doi tac" /></noscript>
+                                        </div>
+                                    </div>
+                                    <div class="sv-footer_center-help">
+                                        <div class="sv-footer_center-help-title">TRUNG TÂM TRỢ GIÚP</div>
+                                        <a href="https://new88.online/" class="sv-footer_center-help-name">Liên hệ
+                                            New88</a>
+                                        <a href="https://new88.online/" class="sv-footer_center-help-name">Đại lý</a>
+                                        <a href="https://new88.online/" class="sv-footer_center-help-name">Chính sách và
+                                            bảo mật</a>
+                                        <a href="https://new88.online/" class="sv-footer_center-help-name">Điều khoản
+                                            điều kiện</a>
+                                        <a href="https://new88.online/" class="sv-footer_center-help-name">Câu hỏi
+                                            thường gặp</a>
+                                        <a href="https://new88.online/" class="sv-footer_center-help-name">Miễn trách
+                                            nhiệm</a>
+                                        <a href="https://new88.online/" class="sv-footer_center-help-name">Chơi có trách
+                                            nhiệm</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="entry-content" itemprop="text">
+                            </div>
+                        </div>
+                    </article>
+                </main>
+            </div>
+        </div>
+    </div>
+    <div class="site-footer">
+    </div>
+    <nav id="generate-slideout-menu" class="main-navigation slideout-navigation"
+        itemtype="https://schema.org/SiteNavigationElement" itemscope>
+        <div class="inside-navigation grid-container grid-parent">
+            <div class="main-nav">
+                <ul id="menu-menu-2" class=" slideout-menu">
+                    <li
+                        class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-6526">
+                        <a href="https://new88.online/" aria-current="page">Trang Chủ New88</a>
+                    </li>
+                    <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6533"><a
+                            href="https://new88.online/codemienphi/">Code New88</a></li>
+                    <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6527"><a
+                            href="https://new88.online/huong-dan/">Hướng Dẫn</a></li>
+                    <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6528"><a
+                            href="https://new88.online/trung-tam-khuyen-mai/">Khuyến Mãi</a></li>
+                    <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6529"><a
+                            href="https://new88.online/xo-so-new88/">Xổ Số</a></li>
+                    <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6534"><a
+                            href="https://new88.online/casino-new88/">Casino</a></li>
+                    <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6530"><a
+                            href="https://new88.online/the-thao-new88/">Thể Thao</a></li>
+                    <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6531"><a
+                            href="https://new88.online/ban-ca-new88/">Bắn Cá</a></li>
+                    <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6532"><a
+                            href="https://new88.online/da-ga-new88/">Đá Gà</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="slideout-overlay">
+        <button class="slideout-exit has-svg-icon">
+            <span class="gp-icon pro-close">
+                <svg viewbox="0 0 512 512" aria-hidden="true" role="img" version="1.1"
+                    xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1em"
+                    height="1em">
+                    <path
+                        d="M71.029 71.029c9.373-9.372 24.569-9.372 33.942 0L256 222.059l151.029-151.03c9.373-9.372 24.569-9.372 33.942 0 9.372 9.373 9.372 24.569 0 33.942L289.941 256l151.03 151.029c9.372 9.373 9.372 24.569 0 33.942-9.373 9.372-24.569 9.372-33.942 0L256 289.941l-151.029 151.03c-9.373 9.372-24.569 9.372-33.942 0-9.372-9.373-9.372-24.569 0-33.942L222.059 256 71.029 104.971c-9.372-9.373-9.372-24.569 0-33.942z" />
+                </svg>
+            </span> <span class="screen-reader-text">Close</span>
+        </button>
+    </div>
+
+    <script>
+        function isMobile() {
+            var isMobile = (/iphone|ipod|android|ie|blackberry|fennec/).test
+                (navigator.userAgent.toLowerCase());
+            return isMobile;
+        }
+
+        if (!isMobile()) {
+            document.querySelectorAll(".wrap-infohelp_social-item").forEach(ele => {
+                ele.addEventListener("mouseover", e => {
+                    const el = e.target.querySelector(".wrap-infohelp_social-item_hover");
+                    el.classList.add("in-wipe-down");
+                    el.classList.remove("out-wipe-up");
+                    el.style.display = "block";
+                    e.target.querySelector(".wrap-infohelp_social-item_current").style.opacity = 0;
+
+                })
+                ele.addEventListener("mouseleave", e => {
+                    const el = e.target.querySelector(".wrap-infohelp_social-item_hover");
+                    el.style.display = "none";
+                    el.style.display = "block";
+                    el.classList.remove("in-wipe-down");
+                    el.classList.add("out-wipe-up");
+                    e.target.querySelector(".wrap-infohelp_social-item_current").style.opacity = 1;
+                })
+            })
+        }
+        const btnviewall = document.querySelector(".sv-block2-btn_viewAll");
+        btnviewall.addEventListener("click", (e) => {
+            e.target.style.display = "none";
+            const el = document.querySelector(".sv-block2_view-detail");
+            el.style.display = "block";
+            el.classList.remove("scale-out-top");
+            el.classList.add("scale-up-top");
+            document.querySelector(".sv-block2-btn_hidden").style.display = "flex";
+        })
+
+        document.querySelector(".sv-block2-btn_hidden").addEventListener("click", (e) => {
+            e.target.style.display = "none";
+            const el = document.querySelector(".sv-block2_view-detail");
+            el.classList.remove("scale-up-top");
+            el.classList.add("scale-out-top");
+            setTimeout(() => {
+                el.style.display = "none";
+            }, 500)
+
+            document.querySelector(".sv-block2-btn_viewAll").style.display = "flex";
+        })
+        var fClickedAlready = false;
+        function onGetCodeClick() {
+            try {
+                if (fClickedAlready === true)
+                    return;
+                let timerInterval = 0;
+                Swal.fire({
+                    html: 'GIFTCODE sẽ hiển thị sau <b></b> giây.',
+                    timer: 60000,
+                    showCloseButton: true,
+                    timerProgressBar: true,
+                    didOpen: () => {
+                        Swal.showLoading()
+                        const b = Swal.getHtmlContainer().querySelector('b')
+                        timerInterval = setInterval(() => {
+                            b.textContent = (parseInt(Swal.getTimerLeft()) / 1000).toFixed(0).toString();
+                        }, 1000)
+                    },
+                    willClose: async () => {
+                        if (Swal.getTimerLeft() > 5000) {
+                            Swal.fire({
+                                text: "Lỗi thao tác",
+                                showClass: {
+                                    popup: 'animate__animated animate__fadeInDown'
+                                },
+                                hideClass: {
+                                    popup: 'animate__animated animate__fadeOutUp'
+                                }
+                            });
+                            return;
+                        }
+                        let myHeader = new Headers();
+                        myHeader.append("Content-Type", "application/json");
+                        var requestOptions = {
+                            method: 'GET',
+                            headers: myHeader,
+                        };
+                        fClickedAlready = true;
+                        await fetch("https://api-freecode.khuyenmai.app/web/getCode?site=new88", requestOptions)
+                            .then(response => response.json())
+                            .then(result => {
+
+                                if (parseInt(result.status_code) === 200) {
+                                    resultTest = result.code;
+                                    document.getElementById("btnGetCode").innerHTML = resultTest;
+                                    document.getElementById("btnGetCode").enable = false;
+                                } else {
+                                    resultTest = result.text_mess;
+                                    document.getElementById("btnGetCode").innerHTML = result.title_mess;
+                                    document.getElementById("btnGetCode").enable = false;
+                                    Swal.fire({
+                                        title: result.title_mess,
+                                        text: result.text_mess,
+                                        showClass: {
+                                            popup: 'animate__animated animate__fadeInDown'
+                                        },
+                                        hideClass: {
+                                            popup: 'animate__animated animate__fadeOutUp'
+                                        }
+                                    });
+                                }
+                            });
+                    }
+                });
+
+            }
+            catch (err) {
+                console.log(err);
+                return;
+            }
+        };
+
+        function delay(t) {
+            return new Promise(resolve => setTimeout(resolve, t));
+        }
+
+    </script>
+</body>
+
+</html>

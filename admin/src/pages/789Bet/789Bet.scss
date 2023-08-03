@@ -1,0 +1,225 @@
+.container-789Bet{
+    width: 90%;
+    height: 100%;
+    margin: auto;
+}
+.h3-789bet{
+    background-image: linear-gradient( -225deg, #0008ff 0%, #0066ff 29%, #6e13ff 67%, #ff00c8 100% );
+    background-size: auto auto;
+    background-clip: border-box;
+    background-size: 200% auto;
+    color: #fff !important;
+    background-clip: text;
+    text-fill-color: transparent;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: textclip 2s linear infinite;
+    display: inline-block;
+    font-size: 24px;
+    margin: 0;
+}
+.icon img{
+    width: 100%;
+    height: 85px;
+    border-radius: 20px;
+    width: 100%;
+    height: 70px;
+    object-fit: contain;
+    border-radius: 20px;
+}
+.container-789Bet h1{
+    text-align: center;
+    color: white;
+    font-size: 1.5em;
+    padding-top:5%
+}
+.container-789Bet .title {
+    // background-image: url('https://789b.me/cskh/images/bg-title-1.png');
+    background-size: 100% 100%;
+    width: 100%;
+    margin: auto;
+}
+.container-789Bet .title h2{
+    padding:3%;
+    text-align: center;
+    color: white    ;
+}
+.flex{
+    display: flex;
+}
+.container-789Bet .info {
+    // background-image: url('https://789b.me/cskh/images/bg-title.png');
+    background-size: 100% 100%;
+    padding: 10px 0;
+}
+.container-789Bet .info .content{
+    padding:1%;
+}
+.container-789Bet .info .content{
+    font-size: 13px;
+    text-align: center;
+    font-weight: 600;
+    color: white;
+}
+.container-789Bet .info .content h3{
+    font-size: 25px;
+    margin:  0;
+}
+.info-contact .flex{
+    padding: 1% 0;
+    padding-top: 3%;
+    height: auto;
+}
+.info-contact .flex .icon{
+    width: 20%;
+}
+.info-contact .flex .icon .img{
+    // border-radius: 10px;
+    height: 45px;
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    // background: linear-gradient(180deg,#debe62,#f5d87a,#dec160, #f8ef93, #d5b456, #c09c43, #e8d67c)!important;
+    padding: 0;
+    margin: 0;
+}
+.info-contact .flex .icon .img img{
+    width: auto;
+    height: 35px;
+    margin-top: 7px;
+}
+.info-contact .name-789bet{
+    // border-radius: 10px;
+    height: 45px;
+    width: 100%; 
+    // background: linear-gradient(180deg,#debe62,#f5d87a,#dec160, #f8ef93, #d5b456, #c09c43, #e8d67c)!important;
+    text-align: center;
+    font-weight: 600;
+    transition: all 0.3s ease;
+
+}
+.container-789Bet .contact{
+    padding-top: 5%;
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+    width: 100%;
+}
+.container-789Bet .contact .icon{
+    padding-right: 10px;
+}
+.container-789Bet .contact .icon:nth-child(4){
+    padding: 0;
+}
+.container-789Bet .footer-789bet{
+    text-align: center;
+    font-weight: 600;
+    color: white;
+    margin-top: 10px;
+    padding-bottom: 30px;
+}
+.name-789bet:hover {
+background-position: 100% 0;
+moz-transition: all .4s ease-in-out;
+-o-transition: all .4s ease-in-out;
+-webkit-transition: all .4s ease-in-out;
+transition: all .4s ease-in-out;
+background: linear-gradient(90deg,#debe62,#f5d87a,#dec160, #f8ef93, #d5b456, #c09c43, #e8d67c)!important;
+
+}
+.info-contact .icon .img:hover{
+background: linear-gradient(90deg,#debe62,#f5d87a,#dec160, #f8ef93, #d5b456, #c09c43, #e8d67c)!important;
+
+}
+.name-789bet:hover,  .icon:hover{
+animation-name-789bet: pulse-grow;
+animation-duration: 0.3s;
+animation-timing-function: linear;
+animation-iteration-count: infinite;
+animation-direction: alternate;
+}
+@keyframes textclip {
+  to {
+    background-position: 200% center;
+  }
+}
+@keyframes pulse-grow {
+to {
+    transform: scale(1.05);
+}
+
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+@media screen and (min-width: 1000px){
+    .container-789Bet{
+        width: 60%;
+    }
+        
+}
+
+.chat-dialog {
+    outline: none !important;
+    visibility: visible !important;
+    resize: none !important;
+    box-shadow: none !important;
+    overflow: visible !important;
+    background: none !important;
+    opacity: 1 !important;
+    top: auto !important;
+    right: 15px !important;
+    bottom: 15px !important;
+    left: auto !important;
+    position: fixed !important;
+    border: 0 !important;
+    min-height: 600px !important;
+    min-width: 350px !important;
+    max-height: 600px !important;
+    max-width: 350px !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    -moz-transition-property: none !important;
+    -webkit-transition-property: none !important;
+    -o-transition-property: none !important;
+    transition-property: none !important;
+    transform: none !important;
+    -webkit-transform: none !important;
+    -ms-transform: none !important;
+    width: 350px !important;
+    height: 600px !important;
+    z-index: auto !important;
+    background-color: transparent !important;
+    cursor: none !important;
+    float: none !important;
+    border-radius: 5px !important;
+    pointer-events: auto !important;
+    clip: auto !important;
+    color-scheme: light !important;
+}
+
+.tawk-button-small {
+    display: none;
+    width: 24px;
+    height: 24px;
+    position: fixed;
+    right: 20px;
+    border-radius: 50%;
+    border: 1px;
+    background-color: rgba(0, 0, 0, 0.211);
+    bottom: 585px;
+    z-index: 99999;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    cursor: pointer;
+}
+
+.tawk-button-small:hover {
+    background-color: rgba(0, 0, 0, 0.285);
+}
+
+.tawk-min-chat-icon {
+    padding-top: 10px;
+}

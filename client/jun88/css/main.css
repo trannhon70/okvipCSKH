@@ -1,0 +1,258 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap");
+
+:root {
+    --main-color: rgb(252, 143, 0);
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.head-top {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.head-top .left {
+    position: absolute;
+    left: auto;
+    padding-left: 25px;
+}
+
+.head-top .left a img {
+    width: 250px;
+}
+
+.head-top .right img {
+    width: 100%;
+}
+
+a {
+    text-decoration: none;
+}
+
+#boxTawkto {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    width: 400px;
+    height: 700px;
+    display: none;
+    z-index: 999;
+}
+
+@media screen and (max-width: 767.98px) {
+    #boxTawkto {
+        width: 95%;
+        height: 90%;
+    }
+}
+
+
+.chat-dialog {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+#btn-tawk-small {
+    display: none;
+    width: 20px;
+    height: 20px;
+    font-size: 12px;
+    position: absolute;
+    right: 1px;
+    top: 1px;
+    border-radius: 0 0 0 8px;
+    border: 1px;
+    background-color: rgba(0, 0, 0, 0.211);
+    z-index: 99;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    cursor: pointer;
+}
+
+#btn-tawk-small:hover {
+    background-color: rgba(0, 0, 0, 0.285);
+}
+
+.display-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrap-cskh {
+    width: 100%;
+    height: auto;
+    min-height: 98vh;
+    background: url("https://jun8858.com/assets/images/bg.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    padding-top: 18px;
+}
+
+@media (max-width: 480px) {
+    .wrap-cskh {
+        padding: 20px 0;
+    }
+
+    .head-top {
+        width: auto;
+    }
+
+    .head-top .left a img {
+        width: 180px !important;
+    }
+}
+
+.wrap-cskh_content {
+    max-width: 481px;
+    width: 100%;
+    height: auto;
+    background: rgba(255, 255, 255, 0.5);
+    mix-blend-mode: normal;
+    border: 1px solid #26A9E0;
+    border-radius: 20px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 10px 0;
+}
+
+@media (max-width: 480px) {
+    .wrap-cskh_content {
+        border: none;
+        padding: 10px 0;
+        background: none;
+    }
+}
+
+.cskh_title {
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 38px;
+    color: #26A9E0;
+}
+
+@media (max-width: 480px) {
+    .cskh_title {
+        font-size: 25px;
+    }
+}
+
+.cskh_btn-to-home {
+    margin-bottom: 30px;
+}
+
+@media (max-width: 480px) {
+    .cskh_btn-to-home {
+        width: 90%;
+        height: 100px;
+        margin-bottom: 5px;
+    }
+}
+
+.cskh_text-1 {
+    width: 340px;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 19px;
+    color: #26A9E0;
+    margin: 0 auto;
+}
+
+.cskh_btn-1 {
+    width: 75%;
+    height: 55px;
+    min-width: 300px;
+    margin: 15px auto;
+    background: url("https://jun8858.com/assets/images/bgBtn.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    font-weight: 900;
+    font-size: 24px;
+    line-height: 28px;
+    text-align: center;
+    cursor: pointer;
+    color: #FFFFFF;
+}
+
+.cskh_list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px 0;
+    gap: 10px;
+}
+
+.cskh_item {
+    display: flex;
+    gap: 10px;
+}
+
+.cskh_item_icon {
+    width: 49.1px;
+    height: 49.1px;
+    background: linear-gradient(0deg, #26A9E0 -6.88%, #2ECDFF 91.31%);
+    border-radius: 10px;
+}
+
+.cskh_item_btn {
+    width: 328.39px;
+    height: 49.1px;
+    background: linear-gradient(0deg, #26A9E0 -6.88%, #2ECDFF 91.31%);
+    border-radius: 32px;
+    font-weight: 900;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    cursor: pointer;
+    color: #FFFFFF;
+}
+
+
+@media (max-width: 480px) {
+    .cskh_item_btn {
+        width: 300px;
+    }
+}
+
+@media (max-width: 360px) {
+    .cskh_item_btn {
+        width: 250px !important;
+    }
+
+    .cskh_text-1 {
+        width: 250px !important;
+    }
+
+    .cskh_btn-1 {
+        width: 250px !important;
+    }
+}
+
+.cskh_footer_icons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 15px 0;
+}
+
+.cskh_footer_icons>a>img {
+    width: 86px;
+    height: 86px;
+}
+
+@media (max-width: 480px) {
+    .cskh_footer_icons>a>img {
+        width: 70px;
+        height: 70px;
+    }
+}
+
+
+/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jun88</title>
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="icon" type="image/x-icon" href="https://jun8858.com/favicon.ico">
+</head>
+
+<body>
+    <div id="boxTawkto">
+        <span onclick="displayIframeAll();" id="btn-tawk-small">x</span>
+        <iframe src="https://tawk.to/chat/63907f5edaff0e1306db59ab/1gs78kavt" frameborder="0" scrolling="no"
+            class="chat-dialog" style="display: none;" id="tawkto-km-sp" title="chat widget">
+        </iframe>
+
+        <iframe src="https://tawk.to/chat/641d56674247f20fefe7b4f8/1gs99j1pq" frameborder="0" scrolling="no"
+            class="chat-dialog" style="display: none;" id="tawkto-nap-tien" title="chat widget">
+        </iframe>
+
+        <iframe src="https://tawk.to/chat/641d56cf31ebfa0fe7f4658d/1gs99m7hh" frameborder="0" scrolling="no"
+            class="chat-dialog" style="display: none;" id="tawkto-rut-tien" title="chat widget">
+        </iframe>
+    </div>
+
+    <script src="./js/main.js"></script>
+
+    <script>
+        function displayIframeAll() {
+            document.getElementById("boxTawkto").style.display = "none";
+            document.getElementById("tawkto-nap-tien").style.display = "none";
+            document.getElementById("tawkto-rut-tien").style.display = "none";
+            document.getElementById("tawkto-km-sp").style.display = "none";
+            document.getElementById("btn-tawk-small").style.display = "none";
+        }
+
+        function showIconToggle() {
+            document.getElementById("btn-tawk-small").style.display = "flex";
+            document.getElementById("boxTawkto").style.display = "flex";
+        }
+
+        function clickTawktoKmSP() {
+            displayIframeAll();
+            document.getElementById("tawkto-km-sp").style.display = "block";
+            showIconToggle();
+        }
+        function clickTawktoNapTien() {
+            displayIframeAll();
+            document.getElementById("tawkto-nap-tien").style.display = "block";
+            showIconToggle();
+        }
+        function clickTawktoRutTien() {
+            displayIframeAll();
+            document.getElementById("tawkto-rut-tien").style.display = "block";
+            showIconToggle();
+        }
+    </script>
+
+
+</body>
+
+</html>

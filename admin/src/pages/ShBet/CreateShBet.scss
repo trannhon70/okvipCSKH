@@ -1,0 +1,495 @@
+#shbet {
+    width: 100%;
+    min-height: 100vh;
+    // background-image: url('https://live.shbet.win/images/bg.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
+  .container-shbet {
+      min-height: 100vh;
+  
+      padding: 20px;
+      box-sizing: border-box;
+  }
+  
+  .shbet-logo {
+      text-align: center;
+  }
+  
+  .shbet-note {
+      padding: 16px;
+      max-width: 630px;
+      box-sizing: border-box;
+      margin: 20px auto;
+      border: 3px solid white;
+    //   border-radius: 15px;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    //   background-color: #5398b5;
+  }
+  
+  .shbet-logo-image {
+      width: 250px;
+      height: auto;
+  }
+  
+  .warning-image {
+      width: 60px;
+      height: auto;
+  }
+  
+  .shbet-note-title {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      justify-content: center;
+  }
+  
+  .shbet-note-title h2 {
+      font-size: 33px;
+      color: #fffc00;
+      text-align: center;
+  }
+  
+  .shbet-note-content {
+      text-align: justify;
+      font-size: 18px;
+      color: white;
+      margin-top: 10px;
+  }
+  
+  .shbet-list-card {
+      display: flex;
+      max-width: 550px;
+      row-gap: 15px;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin: 0 auto;
+      justify-content: space-between;
+  
+  }
+  
+  .shbet-card {
+      width: calc(50% - 25px);
+      min-height: 140px;
+      background-color: #FFFFFF;
+      // border-radius: 15px;
+      padding: 16px 0px 16px;
+      border: 3px solid #5398b5;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  }
+  
+  .shbet-card a {
+    text-decoration: none;
+  }
+  .shbet-card-title {
+      padding: 5px 0px;
+      // background-color: #5398b5;
+      text-align: center;
+      color: white;
+      font-weight: 500;
+      font-size: 21px;
+  }
+  
+  .shbet-card-title p {
+    margin-bottom: 0px;
+  }
+  
+  .shbet-card-image {
+      margin-top: 20px;
+      text-align: center;
+  }
+  
+  .shbet-card-image img {
+      width: 82px;
+      height: auto;
+  }
+  
+  .shbet-list-option {
+      display: grid;
+      grid-template-columns: auto auto auto;
+      max-width: 630px;
+      margin: 40px auto;
+      column-gap: 20px;
+      row-gap: 40px;
+  }
+  
+  .shbet-circle {
+      position: absolute;
+      top: -25%;
+      left: 0%;
+      transform: translateX(-10%) translateY(-18%);
+      border: 5px solid #78c0d5;
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+  }
+  
+  .shbet-circle img {
+      object-fit: contain;
+  }
+  
+  .shbet-option {
+      padding: 10px 0px;
+      // background-color: #5398b5;
+      // border-radius: 20px;
+      position: relative;
+      border: 2px solid white;
+  }
+  
+  .shbet-option a {
+    text-decoration: none;
+  }
+  
+  .shbet-option:hover,
+  .shbet-card:hover {
+      -webkit-filter: drop-shadow(1px 1px 3px #00c3ff) brightness(1.1) !important;
+      filter: drop-shadow(1px 1px 3px #00c3ff) brightness(1.1) !important;
+  }
+  
+  .shbet-option p {
+      text-align: center;
+      font-size: 17px;
+      color: white;
+      font-weight: 500;
+      margin-left: 30px;
+      margin-bottom: 0px;
+  }
+  
+  .shbet-option img {
+      width: 44px;
+      height: 40px;
+  }
+  
+  .shbet-circle {
+      background-color: white;
+      padding: 8px;
+      border-radius: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
+  
+  .turn-back-home-btn {
+      position: absolute;
+      top: 2%;
+      right: 4%;
+      padding: 5px 8px;
+      background-color: #5398b5;
+      border-radius: 15px;
+      display: none;
+  }
+  
+  .turn-back-home-btn a {
+      color: white;
+      text-decoration: none;
+      font-size: 13px;
+  }
+  
+  
+  .vip-content {
+      /* background-image: linear-gradient(0deg, #ededed 100%, #f2f2f2 0); */
+      padding: 10px;
+      max-width: 800px;
+      /*width: 100%;*/
+      border-radius: 20px;
+      position: relative;
+      left: 50% !important;
+      transform: translateX(-50%);
+       
+  }
+  
+  .title-vip {
+      margin-bottom: 20px;
+      color: #fff;
+      font-size: 20px;
+      font-weight: 600;
+      cursor: pointer;
+      left: 50%;
+      transform:  translateX(-50%);
+      padding: 10px 0;
+    //   background-color: #5398b5;
+    //   border-radius: 12px;
+      position: relative;
+      border: 2px solid white;
+      max-width: 800px;
+      /*width: 100%;*/
+  }
+  
+  .title-vip a {
+    text-decoration: none;
+    color: white;
+  }
+  
+  .title-vip #myBtn {
+       display: flex;
+       flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      
+  }
+  
+  #myBtn p {
+    margin-bottom: 0px;
+  }
+  
+  
+  .title-vip #myBtn:hover{
+          -webkit-filter: drop-shadow(1px 1px 3px #00c3ff) brightness(1.1) !important;
+      filter: drop-shadow(1px 1px 3px #00c3ff) brightness(1.1) !important;
+  }
+  
+  #more {
+      display: block;
+  }
+  
+  
+  
+  #more .level-table {
+      outline: none;
+      border-color: #fff;
+      font: inherit;
+      font-size: 100%;
+      margin: 0;
+      padding: 0;
+      color: #fff;
+      vertical-align: baseline;
+      box-sizing: border-box;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      width: 100%;
+      background: #5398b5;
+      text-align: center;
+  }
+  
+  
+  
+  .vip-info-page-wrapper>div.vip-reward-info .info-table {
+      background-image: linear-gradient(0deg, #ededed 100%, #f2f2f2 0);
+      padding: 0 25px;
+      width: 800px;
+  }
+  
+  .vip-info-page-wrapper>div.vip-reward-info .info-table .info-title {
+      color: #454545;
+      font-size: 20px;
+      font-stretch: normal;
+      font-style: normal;
+      font-weight: 600;
+      letter-spacing: normal;
+      line-height: normal;
+      text-align: center;
+  }
+  
+  .vip-info-page-wrapper>div.vip-reward-info {
+      align-items: flex-start;
+      display: flex;
+      font-size: 14px;
+      justify-content: center;
+      margin: 50px 0;
+  }
+  
+  .vip-td {
+      font-family: 'Times New Roman', Times, serif;
+      font-size: 14px;
+      width: calc((100% - 12px) / 5);
+      max-width: calc((100% - 12px) / 5);    
+      padding: 10px 0;
+      border: 1px solid #EDEDED;
+  }
+  
+  .noidungchitiet p span{
+  line-height: 40px;
+  }
+  .info-title {
+      color: #454545;
+      font-size: 20px;
+      font-stretch: normal;
+      font-style: normal;
+      font-weight: 600;
+      letter-spacing: normal;
+      line-height: normal;
+      line-height: 60px;
+      margin-bottom: -10px;
+      text-align: center;
+  }
+  .table-vip tbody tr{
+      text-align: center;
+      background: #5398b5;
+      border-color: #fff;
+      font-size: 18px;
+      padding: 10px 0;
+  } 
+  .table-vip tbody tr td{
+      text-align: center;
+      background: #5398b5;
+      border-color: #fff;
+      font-size: 18px;
+      padding: 10px 0;
+      font-family: 'Times New Roman', Times, serif;
+      color: #fff;
+  } 
+  
+  @media screen and (max-width: 600px) {
+      .shbet-note-title h2 {
+          font-size: 28px;
+      }
+  
+      .shbet-note-content {
+          font-size: 16px;
+      }
+  
+      .turn-back-home-btn {
+          display: block;
+      }
+  }
+  
+  @media screen and (max-width: 646px) {
+      .container-shbet {
+          background-image: url('https://live.shbet.win/images/bg-mobile.png');
+          background-position: center;
+          padding-top: 40px;
+      }
+  
+      .shbet-card-title {
+          padding: 5px 0px;
+          background-color: #5398b5;
+          text-align: center;
+          color: white;
+          font-weight: 500;
+          font-size: 12px;
+      }
+  
+      .shbet-card-image {
+          text-align: center;
+          margin-top: 8px;
+      }
+  
+      .shbet-card-image img {
+          width: 50px;
+          height: auto;
+      }
+  
+      .shbet-list-option {
+          column-gap: 10px;
+          row-gap: 20px;
+      }
+  
+      .shbet-circle {
+          width: 24px;
+          height: 24px;
+          padding: 4px;
+          border: 3px solid #5398b5;
+      }
+  
+      .shbet-option {
+          padding: 7px 0px;
+          background-color: #5398b5;
+          border-radius: 20px;
+          position: relative;
+          border: 2px solid white;
+      }
+  
+      .shbet-option p {
+          text-align: center;
+          font-size: 10px;
+          color: white;
+          font-weight: 500;
+      }
+  
+      .shbet-option img {
+          width: 100%;
+          height: 100%;
+          object-fit: contain;
+      }
+  
+  
+  }
+  
+  @media screen and (max-width: 520px) {
+      .shbet-note-title h2 {
+          font-size: 22px;
+      }
+  
+      .shbet-note-content {
+          font-size: 14px;
+      }
+  
+      .warning-image {
+          width: 40px;
+          height: auto;
+      }
+  
+      .shbet-card {
+          max-width: 170px;
+          height: 80px;
+          padding: 10px 0px;
+      }
+  
+  
+      .shbet-option {
+          padding: 7px 0px;
+          background-color: #5398b5;
+          border-radius: 20px;
+          position: relative;
+          border: 2px solid white;
+      }
+  
+  }
+  
+  @media screen and (max-width: 420px) {
+      .shbet-note-title h2 {
+          font-size: 20px;
+      }
+  
+      .shbet-note-content {
+          font-size: 14px;
+      }
+  
+      .warning-image {
+          width: 35px;
+          height: auto;
+      }
+  }
+  
+  @media screen and (max-width: 440px) {
+  
+      .shbet-option p {
+          text-align: center;
+          font-size: 12px;
+          color: white;
+          font-weight: 500;
+          margin-left: 25px;
+      }
+  
+      .shbet-option {
+          padding: 7px 0px;
+          background-color: #5398b5;
+          border-radius: 20px;
+          position: relative;
+          border: 2px solid white;
+      }
+  }
+  .level-vip{
+  
+      padding-bottom: 50px;
+  }
+  .level-vip p{
+      text-align:justify;
+  }
+  .level-vip p span{
+      line-height: 25px;
+      font-size:13px;
+      
+  }
+  .noidungchitiet p{
+      text-align: justify;
+  }
+  .noidungchitiet p span{
+      line-height: 25px;
+      font-size:15px;
+  }

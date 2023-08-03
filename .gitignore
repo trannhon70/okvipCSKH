@@ -1,0 +1,11 @@
+/server/node_modules
+/server/logs
+/server/package-lock.json
+/server/yarn.lock
+/.vscode
+/logs
+/client/package-lock.json
+/client/yarn.lock
+/client/node_modules
+/client/.next
+/admin/yarn.lock
